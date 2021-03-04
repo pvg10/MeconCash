@@ -1,4 +1,4 @@
-import React,{ useState, useEffect }  from "react";
+import React, { useState, useEffect } from "react";
 // import messages from "./../../assets/Local/messages";
 import { connect } from "react-redux";
 import { NavLink as Link } from "react-router-dom";
@@ -33,15 +33,15 @@ function Header(props) {
   // const { lang } = props;
   // const message = messages[lang];
   const user = useSelector((state) => state.User.user);
-  const [isbase, setBase] = useState(false)
+  const [isbase, setBase] = useState(false);
   // const user = "Admin";
   const classes = useStyles();
   let avatarChars = "A";
-  useEffect(() => { 
+  useEffect(() => {
     var base = window.location.href.includes("/login");
 
-    setBase(base)
-  },[])
+    setBase(base);
+  }, []);
   // var isbase = window.location.href.includes("/fileUploads");
   // console.log("isbase route", isbase)
   function logout() {
@@ -55,7 +55,6 @@ function Header(props) {
         History.push("/login");
 
         Auth.signOut();
-
       });
   }
   return (
@@ -70,78 +69,8 @@ function Header(props) {
             />
           </Link>
         </div>
-        <div className="right__sub--section">
-            <>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() => (window.location = "http://thedse.co/")}
-                >
-                  Home
-                </Link>
-              </span>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() =>
-                    (window.location = "http://thedse.co/about-dse/")
-                  }
-                >
-                  {/* <FontAwesomeIcon icon={faHeart} /> */}
-                  About Us
-                </Link>
-              </span>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() =>
-                    (window.location = "http://thedse.co/how-we-buy-diamonds/")
-                  }
-                >
-                  {/* <FontAwesomeIcon icon={faHeart} /> */}
-                  How We Buy Diamonds
-                </Link>
-              </span>
-            </>
-       
-            {/* <span>
-              <Dropdown>
-                <Dropdown.Toggle className="profile__icon--btn">
-                  <Avatar className={classes.purple}>
-                    {avatarChars.toUpperCase()}
-                  </Avatar>
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                  <div className="user__info__section">
-                    <span className="user__name">Admin</span>
-                    <span className="user__mail">{`${user.email}`}</span>
-                  </div>
-                  <Dropdown.Divider />
-                  <Dropdown.Item onClick={logout}>
-                    <FontAwesomeIcon icon={faSignOutAlt} />
-                    Logout
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </span> */}
-          
-        </div>
-      </section>
-
-        {/* <section className="bottom__section">
-          <ul>
-            <li>
-              <Link
-                to={`/fileUploads/upload-lists`}
-                activeStyle={{ textDecoration: "underline" }}
-              >
-                Upload LIST
-              </Link>
-            </li>
-          </ul>
-        </section> */}
       
+      </section>
     </header>
   );
 }
