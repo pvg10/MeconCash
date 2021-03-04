@@ -16,7 +16,7 @@ import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { setUserDetails } from "../../store/User/UserAction";
 import { useStateMachine } from "little-state-machine";
-import clearAction from "../RequestAccess/clearAction";
+import clearAction from "./clearAction";
 
 function Login() {
   const dispatch = useDispatch();

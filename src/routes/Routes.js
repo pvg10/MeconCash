@@ -19,7 +19,6 @@ import Auth from "../utils/Auth";
 import Header from "../containers/Header";
 import Footer from "../containers/Footer/Footer";
 import { StateMachineProvider, createStore } from "little-state-machine";
-import UploadLists from "../containers/UploadLists/UploadLists";
 
 const Routes = ({ lang }) => {
   const location = useLocation();

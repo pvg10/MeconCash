@@ -13,11 +13,9 @@ import {
   useRouteMatch,
   Redirect,
 } from "react-router-dom";
-import { Nav } from "react-bootstrap";
 import * as LazyComponent from "../../utils/LazyLoaded";
 import PrivateRoute from "../../utils/PrivateRoute";
 import Header from "../Header";
-import Frontpage from "../../components/Frontpage";
 
 function Dash() {
   let { path, url } = useRouteMatch();
