@@ -40,15 +40,6 @@ function Login() {
 
           dispatch(setUserDetails(response.data.admin));
           msgNode.style.display = "none";
-          toast("We will be announcing our buying dates soon", {
-            position: "top-center",
-            autoClose: false,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-          });
           History.push("/fileUploads/upload-lists");
         }
       })

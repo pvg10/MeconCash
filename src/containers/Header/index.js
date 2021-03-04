@@ -46,6 +46,7 @@ function Header(props) {
   // }
   // console.log('window', window.location.href)
   var isbase = window.location.href.includes("/fileUploads");
+  // console.log("isbase", isbase)
   function logout() {
     var token = localStorage.getItem("token");
     axios
@@ -114,9 +115,7 @@ function Header(props) {
           )}
           {isbase ? (
             <span>
-              {/* <span onClick={logout} className="login-btn btn">
-                Logout
-              </span> */}
+            
               <Dropdown>
                 <Dropdown.Toggle className="profile__icon--btn">
                   <Avatar className={classes.purple}>
@@ -154,28 +153,6 @@ function Header(props) {
                 Upload LIST
               </Link>
             </li>
-            {/* <li>
-                <Link
-                  to="#"
-                  onClick={() =>
-                    (window.open(
-                      'https://docsend.com/view/uyw892k3c9m7v6xi',
-                      '_blank' // <- This is what makes it open in a new window.
-                    ))
-                  }
-                >
-                  How We Buy Diamonds
-                </Link>
-              </li> */}
-            {/* <li>
-              <Link
-                // to={`/fileUploads/list-bidding`}
-                // activeStyle={{ textDecoration: "underline" }}
-                to={'#'}
-              >
-                Price Quote
-              </Link>
-            </li> */}
           </ul>
         </section>
       ) : (

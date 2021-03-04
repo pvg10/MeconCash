@@ -351,6 +351,11 @@ export default function UploadList() {
           title="Files Uploaded"
           columns={[
             {
+              title: "Date",
+              field: "Time",
+            },
+            { title: "Company", field: "company" },
+            {
               title: "File",
               cellStyle: {
                 width: "30%",
@@ -367,11 +372,7 @@ export default function UploadList() {
                 );
               },
             },
-            {
-              title: "Date",
-              field: "Time",
-            },
-            { title: "Company", field: "company" },
+       
             { title: "Status", field: "status" },
             { title: "Type", field: "type" },
             { title: "Total", field: "total_records" },
@@ -425,28 +426,7 @@ export default function UploadList() {
             },
           ]}
         />
-        {/* <div className="row" style={{ marginTop: "10px" }}>
-          <div className="col-sm-12" style={{ paddingLeft: 0 }}>
-            <div style={{ fontSize: "14px" }}>
-              <strong>Note:</strong>Please note that we consider diamonds only
-              in the latest file uploaded. Please ensure that the latest file
-              uploaded has all the diamonds you wish to sell
-            </div>
-          </div>
-        </div>
-        <div className="row" style={{ marginTop: "5px" }}>
-          <div className="col-sm-12" style={{ paddingLeft: 0 }}>
-            <div style={{ fontSize: "14px" }}>
-            <strong>*Please note:To avoid errors during the file upload, please download
-          and refer to the upload file format and help file. If you still face
-          errors during the upload process, please refer to the error column for
-          details. If you'd like to upload files in your own format, please
-          provide the format to diamonds@diamondstandard.co, it may take up to
-          30 days to implement such mapping and will delay us from potentially
-          buying from you.</strong>
-            </div>
-          </div>
-        </div> */}
+        
         <div className="pagination-wrapper">
           <Pagination
             activePage={activePage}
