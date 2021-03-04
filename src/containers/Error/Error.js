@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Tabs, Tab } from "react-bootstrap";
+// import { Tabs, Tab } from "react-bootstrap";
 import MaterialTable from "material-table";
 import AddBox from "@material-ui/icons/AddBox";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
@@ -17,15 +17,15 @@ import SaveAlt from "@material-ui/icons/SaveAlt";
 import Search from "@material-ui/icons/Search";
 import ViewColumn from "@material-ui/icons/ViewColumn";
 import { DSE_URL } from "../../utils/Constants";
-import moment from "moment";
-import Checkbox from "@material-ui/core/Checkbox";
+// import moment from "moment";
+// import Checkbox from "@material-ui/core/Checkbox";
 import { forwardRef } from "react";
 import History from "../../routes/History";
 import Pagination from "react-js-pagination";
 import axios from "axios";
-import _ from "lodash";
+// import _ from "lodash";
 import "./index.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Auth from "../../utils/Auth";
 import { toast } from "react-toastify";
 
@@ -53,10 +53,10 @@ const tableIcons = {
   ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
 };
 export default function Error() {
-  var tableData = [
-    { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
-    { name: "Zerya Betül", surname: "Baran", birthYear: 2017, birthCity: 34 },
-  ];
+  // var tableData = [
+  //   { name: "Mehmet", surname: "Baran", birthYear: 1987, birthCity: 63 },
+  //   { name: "Zerya Betül", surname: "Baran", birthYear: 2017, birthCity: 34 },
+  // ];
   const [purchaseOrder, setPO] = useState([]);
 
   const [activePage, setActivePage] = useState(1);
@@ -70,7 +70,6 @@ export default function Error() {
     var token = localStorage.getItem("token");
     var VendorID = localStorage.getItem("VendorID");
     var url = window.location.href;
-    var token = localStorage.getItem("token");
     var sortParam = "ds_diamond_sku";
     // console.log("token 68", token);
     // var api = `/latestPurchaseOrder?vendor_id=${VendorID}`;
@@ -135,16 +134,16 @@ export default function Error() {
   //   var totalOffer = purchaseOrder.reduce((sum, record) => {
   //     return sum + parseFloat(record.Dse_Bid_Price)
   //   }, 0);
-  function zeroPad(num, numZeros) {
-    var n = Math.abs(num);
-    var zeros = Math.max(0, numZeros - Math.floor(n).toString().length);
-    var zeroString = Math.pow(10, zeros).toString().substr(1);
-    if (num < 0) {
-      zeroString = "-" + zeroString;
-    }
+  // function zeroPad(num, numZeros) {
+  //   var n = Math.abs(num);
+  //   var zeros = Math.max(0, numZeros - Math.floor(n).toString().length);
+  //   var zeroString = Math.pow(10, zeros).toString().substr(1);
+  //   if (num < 0) {
+  //     zeroString = "-" + zeroString;
+  //   }
 
-    return zeroString + n;
-  }
+  //   return zeroString + n;
+  // }
 
   // console.log("data ", purchaseOrder);
 

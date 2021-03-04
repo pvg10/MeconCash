@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/Navbar/Navbar";
-import { HashRouter, Router } from "react-router-dom";
+// import Navbar from "../components/Navbar/Navbar";
+import { HashRouter } from "react-router-dom";
 import history from "../routes/History";
 import Routes from "../routes/Routes";
 import { IntlProvider } from "react-intl";
@@ -10,7 +10,7 @@ import Loader from "../components/Loader/Loader";
 import "./App.scss";
 import { connect } from "react-redux";
 import { setCurrentLang } from "../store/Lang/LangAction";
-import Login from "./Login/Login";
+// import Login from "./Login/Login";
 
 class App extends React.Component {
   // App contains routes and also wrapped with snackbar and intl for localization

@@ -1,10 +1,7 @@
 import React, { Suspense, useEffect } from "react";
 import {
-  Router,
   Switch,
   Redirect,
-  useLocation,
-  useHistory,
   HashRouter,
   Route,
 } from "react-router-dom";
@@ -12,17 +9,17 @@ import history from "./History";
 import * as LazyComponent from "../utils/LazyLoaded";
 import Loader from "../components/Loader/Loader";
 import PrivateRoute from "../utils/PrivateRoute";
-import store from "../store";
-import { setCurrentLang } from "../store/Lang/LangAction";
-import Auth from "../utils/Auth";
+// import store from "../store";
+// import { setCurrentLang } from "../store/Lang/LangAction";
+// import Auth from "../utils/Auth";
 // import Login from "../containers/Login/Login";
 import Header from "../containers/Header";
 import Footer from "../containers/Footer/Footer";
 import { StateMachineProvider, createStore } from "little-state-machine";
 
 const Routes = ({ lang }) => {
-  const location = useLocation();
-  const History = useHistory();
+  // const location = useLocation();
+  // const History = useHistory();
 
   useEffect(() => {
     // store.dispatch(

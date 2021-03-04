@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import "./../../scss/login.scss";
 import History from "../../routes/History";
 
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 
 import LockIcon from "@material-ui/icons/Lock";
 import Grid from "@material-ui/core/Grid";
@@ -65,32 +65,31 @@ function Login() {
   const [password, setPassword] = useState("");
   const { actions, state } = useStateMachine({ clearAction });
 
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      display: "flex",
-      flexWrap: "wrap",
-    },
-    margin: {
-      margin: theme.spacing(1),
-    },
-    withoutLabel: {
-      marginTop: theme.spacing(3),
-    },
-    textField: {
-      width: "25ch",
-    },
-  }));
-  const classes = useStyles();
+  // const useStyles = makeStyles((theme) => ({
+  //   root: {
+  //     display: "flex",
+  //     flexWrap: "wrap",
+  //   },
+  //   margin: {
+  //     margin: theme.spacing(1),
+  //   },
+  //   withoutLabel: {
+  //     marginTop: theme.spacing(3),
+  //   },
+  //   textField: {
+  //     width: "25ch",
+  //   },
+  // }));
+  // const classes = useStyles();
 
-  const onUserNameChange = (e) => {
-    e.stopPropagation();
-    setUserName(e.currentTarget.value);
-  };
-  const onPasswordChange = (e) => {
-    e.stopPropagation();
-    setPassword(e.currentTarget.value);
-  };
-
+  // const onUserNameChange = (e) => {
+  //   e.stopPropagation();
+  //   setUserName(e.currentTarget.value);
+  // };
+  // const onPasswordChange = (e) => {
+  //   e.stopPropagation();
+  //   setPassword(e.currentTarget.value);
+  // };
 
   return (
     <div className="row login-page">
@@ -118,7 +117,7 @@ function Login() {
                     name="email"
                     inputRef={register({
                       required: true,
-                      pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                     })}
                   />
                 </Grid>

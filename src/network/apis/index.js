@@ -1,10 +1,10 @@
 import axios from "axios";
 import { requestHandler, successHandler, errorHandler } from "../interceptors";
-import { BASE_URL } from "../../utils/Constants";
+// import { BASE_URL } from "../../utils/Constants";
 import { DSE_URL } from "../../utils/Constants";
 
 
-//add your BASE_URL to Constants file
+// add your BASE_URL to Constants file
 export const axiosInstance = axios.create({
   baseURL: DSE_URL,
   headers: {

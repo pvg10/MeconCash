@@ -1,19 +1,14 @@
 import React from "react";
-import messages from "./../../assets/Local/messages";
+// import messages from "./../../assets/Local/messages";
 import { connect } from "react-redux";
 import { NavLink as Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
-import {
-  faUserCircle,
-  faUniversity,
-  faSignOutAlt,
-  faAddressBook,
-} from "@fortawesome/free-solid-svg-icons";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
 import History from "../../routes/History";
 import Auth from "../../utils/Auth";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import { deepPurple } from "@material-ui/core/colors";
 import Avatar from "@material-ui/core/Avatar";
@@ -35,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
 
 function Header(props) {
   // render() {
-  const { lang } = props;
-  const message = messages[lang];
+  // const { lang } = props;
+  // const message = messages[lang];
   const user = useSelector((state) => state.User.user);
   const classes = useStyles();
   let avatarChars = "";
@@ -51,22 +46,21 @@ function Header(props) {
   // console.log('window', window.location.href)
   var isbase = window.location.href.includes("/fileUploads");
   function logout() {
-    var token = localStorage.getItem('token');
+    var token = localStorage.getItem("token");
     axios
-    .get(
-      DSE_URL + "/logout",
-      { headers: { Authorization: `Bearer ${token}` } }
-      )
+      .get(DSE_URL + "/logout", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(function (response) {
         // console.log("list", response.data.data.rows);
         History.push("/login");
-      
-      Auth.signOut();
-      // res.forEach((o) => {
-      //   o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
-      // });
-      // setData(res);
-    });
+
+        Auth.signOut();
+        // res.forEach((o) => {
+        //   o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
+        // });
+        // setData(res);
+      });
   }
   return (
     <header className="container">
@@ -113,7 +107,6 @@ function Header(props) {
                   How We Buy Diamonds
                 </Link>
               </span>
-            
             </>
           ) : (
             ""
@@ -152,7 +145,6 @@ function Header(props) {
       {isbase ? (
         <section className="bottom__section">
           <ul>
-         
             <li>
               <Link
                 to={`/fileUploads/upload-lists`}
@@ -183,7 +175,6 @@ function Header(props) {
                 Price Quote
               </Link>
             </li> */}
-  
           </ul>
         </section>
       ) : (

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { DropzoneDialog } from "material-ui-dropzone";
 import axios from "axios";
 import moment from "moment";
-import { DataGrid } from "@material-ui/data-grid";
+// import { DataGrid } from "@material-ui/data-grid";
 import MaterialTable from "material-table";
 import AddBox from "@material-ui/icons/AddBox";
 import ArrowDownward from "@material-ui/icons/ArrowDownward";
@@ -23,11 +23,11 @@ import RefreshIcon from "@material-ui/icons/Refresh";
 import { DSE_URL } from "../../utils/Constants";
 import { forwardRef } from "react";
 import "./index.scss";
-import { render } from "@testing-library/react";
+// import { render } from "@testing-library/react";
 import Pagination from "react-js-pagination";
 import { toast } from "react-toastify";
-import ReactTooltip from "react-tooltip";
-import { useSelector, useDispatch } from "react-redux";
+// import ReactTooltip from "react-tooltip";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/Auth";
 import History from "../../routes/History";
@@ -58,45 +58,24 @@ const tableIcons = {
 };
 export default function UploadList() {
   // getModalStyle is not a pure function, we roll the style only on the first render
-  const columns = [
-    // { field: 'id', headerName: 'ID', width: 70 },
-    { field: "FileOriginalName", headerName: "File", width: 350 },
-    { field: "Time", headerName: "Time", width: 200 },
-    {
-      field: "Status",
-      headerName: "Status",
-      width: 150,
-    },
-  ];
   // const apiRef = useApiRef();
   const user = useSelector((state) => state.User.user);
   // console.log("user company", user.company);
-  const rows = [
-    { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-    { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-    { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-    { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-    { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-    { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
-    { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-    { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-    { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
-  ];
 
   const [tableData, setData] = React.useState([]);
   const [open, setOpen] = useState(false);
   const [isIndividual, setIndividual] = useState(true);
   const [activePage, setActivePage] = useState(1);
   const [totalCount, setTotalCount] = useState(10);
-  const tableRef = React.createRef();
+  // const tableRef = React.createRef();
   const [title, setTitle] = useState("Individual Diamonds");
 
-  const handleOpen = (e, val) => {
-    // console.log("val", val);
-    setTitle(e.target.name);
-    setIndividual(val);
-    setOpen(true);
-  };
+  // const handleOpen = (e, val) => {
+  //   // console.log("val", val);
+  //   setTitle(e.target.name);
+  //   setIndividual(val);
+  //   setOpen(true);
+  // };
 
   useEffect(() => {
     var VendorID = localStorage.getItem("VendorID");
@@ -487,17 +466,6 @@ export default function UploadList() {
           />
         </div>
       </div>
-
-      {/* <MaterialTable
-          columns={[
-            { title: 'Adı', field: 'name' },
-            { title: 'Soyadı', field: 'surname' },
-            { title: 'Doğum Yılı', field: 'birthYear', type: 'numeric' },
-            { title: 'Doğum Yeri', field: 'birthCity', lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' } }
-          ]}
-          data={[{ name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 }]}
-          title="Demo Title"
-        />  */}
     </>
   );
 }

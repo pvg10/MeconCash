@@ -1,24 +1,15 @@
 import React from "react";
-import messages from "./../../assets/Local/messages";
+// import messages from "./../../assets/Local/messages";
 import { connect } from "react-redux";
 // import UserOne from "./user-one";
 // import UserTwo from "./user-two";
-import {
-  BrowserRouter as Router,
-  HashRouter,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-  Redirect,
-} from "react-router-dom";
+import { HashRouter, Switch, Route, useRouteMatch } from "react-router-dom";
 import * as LazyComponent from "../../utils/LazyLoaded";
 import PrivateRoute from "../../utils/PrivateRoute";
 import Header from "../Header";
 
 function Dash() {
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   // const { lang } = this.props;
   // const message = messages[lang];
   // console.log(url, "url", path);
@@ -38,7 +29,7 @@ function Dash() {
               component={LazyComponent.UploadLists}
               path="/fileUploads/upload-lists"
             />
-              <PrivateRoute
+            <PrivateRoute
               component={LazyComponent.Error}
               path="/fileUploads/errors"
             />
@@ -58,16 +49,16 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, null)(Dash);
 
-function Topic() {
-  // The <Route> that rendered this component has a
-  // path of `/topics/:topicId`. The `:topicId` portion
-  // of the URL indicates a placeholder that we can
-  // get from `useParams()`.
-  let { topicId } = useParams();
+// function Topic() {
+//   // The <Route> that rendered this component has a
+//   // path of `/topics/:topicId`. The `:topicId` portion
+//   // of the URL indicates a placeholder that we can
+//   // get from `useParams()`.
+//   let { topicId } = useParams();
 
-  return (
-    <div>
-      <h3>{topicId}123</h3>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <h3>{topicId}123</h3>
+//     </div>
+//   );
+// }

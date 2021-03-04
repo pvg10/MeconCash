@@ -1,6 +1,6 @@
 import store from "../../store";
 import { loader } from "../../store/Loader/LoaderAction";
-import Auth from "../../utils/Auth";
+// import Auth from "../../utils/Auth";
 
 export const isHandlerEnabled = (config = {}) => {
   return config.hasOwnProperty("handlerEnabled") && !config.handlerEnabled
