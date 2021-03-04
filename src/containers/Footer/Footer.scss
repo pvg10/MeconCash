@@ -1,0 +1,28 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  a {
+    color: #218cff;
+  }
+  .footer__top__section {
+    background-color: #292929;
+    padding: 7px;
+    font-size: 12px;
+    .contact__footer {
+      color: #fff;
+      .contact__email {
+        margin-left: 5px;
+      }
+    }
+  }
+  .footer__bottom__section {
+    background-color: #703db9;
+    padding: 10px;
+    color: white;
+    text-align: center;
+  }
+}

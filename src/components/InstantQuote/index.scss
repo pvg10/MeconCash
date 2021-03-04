@@ -1,0 +1,35 @@
+#catalog__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  .btn:focus {box-shadow: none;}
+  .left__filter {
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    .dropdown-toggle::after { 
+      content: none; 
+      outline: none;
+    } 
+    svg{  
+      margin-bottom: -2px;
+      margin-left: 11px;
+    }
+  }
+}
+
+.product__list--section {
+  .product__item {
+    margin-top: 40px;
+    .prod-brand-name {
+      font-size: 14px;
+      color: #d1c8cc;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+  }
+  .product__item img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,40 @@
+// Add you general and shared styles here
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.Toastify__toast--error {
+  background: #c73e2f !important;
+}
+.Toastify__toast--success {
+  background: #098e0d !important;
+}
+.Toastify__toast--default {
+  background: #eaeaea !important;
+  color: #4c4c4c !important;
+  box-shadow: none !important;
+}
+.btn-outline-primary {
+  color: #7250ba;
+  border-color: #7250ba;
+  padding: 2px 10px;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #7250ba;
+  border-color: #7250ba;
+}
+.pagination {
+  li a {
+    color: #5d5d5d !important;
+  }
+}
+.pagination-wrapper ul.pagination li.active {
+  background-color: #5d5d5d !important;
+  a {
+    color: #ffffff !important;
+  }
+}
+.row {
+  margin: 0;
+}

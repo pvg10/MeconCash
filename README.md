@@ -1,1 +1,1 @@
-# DSE-Admin-UI
+# DSE-UI
