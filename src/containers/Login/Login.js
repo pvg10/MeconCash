@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { setUserDetails } from "../../store/User/UserAction";
 import { useStateMachine } from "little-state-machine";
 import clearAction from "./clearAction";
+import Header from "../Header";
 
 function Login() {
   const dispatch = useDispatch();
@@ -82,6 +83,8 @@ function Login() {
   // };
 
   return (
+    <>
+    <Header/>
     <div className="row login-page">
       <div className="col-sm-3"></div>
       <div className="col-sm-6">
@@ -164,6 +167,7 @@ function Login() {
       </div>
       <div className="col-sm-3"></div>
     </div>
+    </>
   );
 }
 

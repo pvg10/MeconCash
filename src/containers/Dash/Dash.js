@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 import { HashRouter, Switch, Route, useRouteMatch } from "react-router-dom";
 import * as LazyComponent from "../../utils/LazyLoaded";
 import PrivateRoute from "../../utils/PrivateRoute";
-import Header from "../Header";
+import Header from "./Header";
 
 function Dash() {
   let { path } = useRouteMatch();

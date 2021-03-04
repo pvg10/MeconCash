@@ -5,7 +5,7 @@ import { NavLink as Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./index.scss";
+import "../Header/index.scss"
 import History from "../../routes/History";
 import Auth from "../../utils/Auth";
 import { useSelector } from "react-redux";
@@ -62,7 +62,7 @@ function Header(props) {
     <header className="container">
       <section className="top__section">
         <div>
-          <Link to="/login">
+          <Link to="/fileUploads">
             <img
               src={process.env.PUBLIC_URL + "/logo/DSELogo.png"}
               alt="company-logo"
@@ -71,40 +71,9 @@ function Header(props) {
           </Link>
         </div>
         <div className="right__sub--section">
-            <>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() => (window.location = "http://thedse.co/")}
-                >
-                  Home
-                </Link>
-              </span>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() =>
-                    (window.location = "http://thedse.co/about-dse/")
-                  }
-                >
-                  {/* <FontAwesomeIcon icon={faHeart} /> */}
-                  About Us
-                </Link>
-              </span>
-              <span>
-                <Link
-                  to="#"
-                  onClick={() =>
-                    (window.location = "http://thedse.co/how-we-buy-diamonds/")
-                  }
-                >
-                  {/* <FontAwesomeIcon icon={faHeart} /> */}
-                  How We Buy Diamonds
-                </Link>
-              </span>
-            </>
+      
        
-            {/* <span>
+            <span>
               <Dropdown>
                 <Dropdown.Toggle className="profile__icon--btn">
                   <Avatar className={classes.purple}>
@@ -124,12 +93,12 @@ function Header(props) {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
-            </span> */}
+            </span>
           
         </div>
       </section>
 
-        {/* <section className="bottom__section">
+        <section className="bottom__section">
           <ul>
             <li>
               <Link
@@ -140,7 +109,7 @@ function Header(props) {
               </Link>
             </li>
           </ul>
-        </section> */}
+        </section>
       
     </header>
   );

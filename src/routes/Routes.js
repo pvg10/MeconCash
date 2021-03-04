@@ -41,7 +41,7 @@ const Routes = ({ lang }) => {
       <StateMachineProvider>
         <HashRouter history={history}>
           {/* {Auth.isAuth() ? */}
-          {!isbase ? <Header /> : ""}
+          {/* {!isbase ? <Header /> : ""} */}
           <Switch>
             <LazyComponent.NotFound path="/404" exact />
             <LazyComponent.Login path="/login" exact />

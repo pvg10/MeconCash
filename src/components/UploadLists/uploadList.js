@@ -373,8 +373,8 @@ export default function UploadList() {
               },
             },
        
-            { title: "Status", field: "status" },
             { title: "Type", field: "type" },
+            { title: "Status", field: "status" },
             { title: "Total", field: "total_records" },
             {
               title: "Processed",
