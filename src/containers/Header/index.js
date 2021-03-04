@@ -33,22 +33,23 @@ function Header(props) {
   // const { lang } = props;
   // const message = messages[lang];
   const user = useSelector((state) => state.User.user);
+  // const user = "Admin";
   const classes = useStyles();
-  let avatarChars = "";
-  if (user.company) {
-    var splitArr = user.company.split(" ");
-    if (splitArr.length === 1) {
-      avatarChars = user.company.substring(0, 2);
-    } else {
-      avatarChars = splitArr[0].substring(0, 1) + splitArr[1].substring(0, 1);
-    }
-  }
+  let avatarChars = "A";
+  // if (user.company) {
+  //   var splitArr = user.company.split(" ");
+  //   if (splitArr.length === 1) {
+  //     avatarChars = user.company.substring(0, 2);
+  //   } else {
+  //     avatarChars = splitArr[0].substring(0, 1) + splitArr[1].substring(0, 1);
+  //   }
+  // }
   // console.log('window', window.location.href)
   var isbase = window.location.href.includes("/fileUploads");
   function logout() {
     var token = localStorage.getItem("token");
     axios
-      .get(DSE_URL + "/logout", {
+      .get(DSE_URL + "/admin/logout", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(function (response) {
@@ -125,7 +126,7 @@ function Header(props) {
 
                 <Dropdown.Menu>
                   <div className="user__info__section">
-                    <span className="user__name">{`${user.company}`}</span>
+                    <span className="user__name">Admin</span>
                     <span className="user__mail">{`${user.email}`}</span>
                   </div>
                   <Dropdown.Divider />

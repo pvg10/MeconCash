@@ -31,15 +31,14 @@ function Login() {
     console.log(data, DSE_URL);
     var msgNode = document.querySelector("#loginResText");
     axios
-      .post(DSE_URL + "/login", data)
+      .post(DSE_URL + "/admin/login", data)
       .then(function (response) {
         console.log(response);
         if (response.status == 200) {
           localStorage.setItem("token", response.data.token);
-          localStorage.setItem("VendorID", response.data.user.vendor_id);
-          localStorage.setItem("vendorEmail", response.data.user.email);
+          localStorage.setItem("vendorEmail", response.data.admin.email);
 
-          dispatch(setUserDetails(response.data.user));
+          dispatch(setUserDetails(response.data.admin));
           msgNode.style.display = "none";
           toast("We will be announcing our buying dates soon", {
             position: "top-center",

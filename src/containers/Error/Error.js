@@ -68,9 +68,7 @@ export default function Error() {
 
   function getData(page) {
     var token = localStorage.getItem("token");
-    var VendorID = localStorage.getItem("VendorID");
     var url = window.location.href;
-    var sortParam = "ds_diamond_sku";
     // console.log("token 68", token);
     // var api = `/latestPurchaseOrder?vendor_id=${VendorID}`;
     var [hashs, params] = url.split("#")[1].split("?");
@@ -80,17 +78,12 @@ export default function Error() {
     for (var [key, value] of o.entries()) {
       paramsObj[key] = value;
     }
-    if (paramsObj.type == "individual") {
-      sortParam = "ds_diamond_sku";
-    } else {
-      sortParam = "ds_parcel_sku";
-    }
     // console.log("sortParam ", sortParam);
     if (paramsObj.type && paramsObj.vendor_id && paramsObj.file_id) {
       axios
         .get(
           DSE_URL +
-            `/errorDiamonds?page=${page}&limit=5&vendor_id= ${VendorID}&sort=${sortParam};asc&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
+            `/admin/errorDiamonds?page=${page}&limit=5&vendor_id=${paramsObj.vendor_id}&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -149,7 +142,7 @@ export default function Error() {
 
   return (
     <div className="purchase-order-lists">
-      <div style={{ maxWidth: "100%", height: "auto", paddingBottom: "70px" }}>
+      <div style={{ maxWidth: "100%", height: "auto", paddingBottom: "100px" }}>
         <MaterialTable
           title="Errors"
           icons={tableIcons}

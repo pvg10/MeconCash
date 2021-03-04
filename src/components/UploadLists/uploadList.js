@@ -78,17 +78,12 @@ export default function UploadList() {
   // };
 
   useEffect(() => {
-    var VendorID = localStorage.getItem("VendorID");
-    // console.log(VendorID);
     var token = localStorage.getItem("token");
     // console.log(token, "token>>>>>>>>>>>>>>100");
     axios
-      .get(
-        DSE_URL +
-          `/vendorUploadList?page=${activePage}&limit=10&vendor_id=` +
-          VendorID,
-        { headers: { Authorization: `Bearer ${token}` } }
-      )
+      .get(DSE_URL + `/admin/vendorUploads?limit=50`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(function (response) {
         // console.log(response, "resss");
         // console.log("list", response.data.data.rows);
@@ -119,22 +114,21 @@ export default function UploadList() {
       });
   }, []);
   function handlePageChange(page) {
-    var VendorID = localStorage.getItem("VendorID");
+    // var VendorID = localStorage.getItem("VendorID");
     var token = localStorage.getItem("token");
     // console.log(token, "token>>>>>>>>>>>>>>123");
     // console.log(VendorID);
     axios
       .get(
         DSE_URL +
-          `/vendorUploadList?page=${page}&limit=10&vendor_id=` +
-          VendorID,
+          `/admin/vendorUploads?page=${page}&limit=50`,
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then(function (response) {
-        console.log("list", response.data.data.rows);
+        // console.log("list", response.data.data.rows);
         var data = response.data.data.rows;
         let res = data.map(({ FileId, ...rest }) => ({ id: FileId, ...rest }));
-        console.log(res, "vpo");
+        // console.log(res, "vpo");
         res.forEach((o) => {
           o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
         });
@@ -160,12 +154,12 @@ export default function UploadList() {
       });
   }
   function getData() {
-    var VendorID = localStorage.getItem("VendorID");
+    // var VendorID = localStorage.getItem("VendorID");
     var token = localStorage.getItem("token");
     // console.log(token, "token>>>>>>>>>>>>>>148");
     axios
       .get(
-        DSE_URL + "/vendorUploadList?page=1&limit=10&vendor_id=" + VendorID,
+        DSE_URL + "/admin/vendorUploads?page=1&limit=50",
         { headers: { Authorization: `Bearer ${token}` } }
       )
       .then(function (response) {
@@ -242,33 +236,30 @@ export default function UploadList() {
                 draggable: true,
                 progress: undefined,
               });
-              var VendorID = localStorage.getItem("VendorID");
-              console.log(VendorID);
               var token = localStorage.getItem("token");
               console.log(token, "token>>>>>>>>>>>>>>206");
               axios
                 .get(
                   DSE_URL +
-                    `/vendorUploadList?page=${activePage}&limit=10&vendor_id=` +
-                    VendorID,
+                    `/admin/vendorUploads?page=${activePage}&limit=50`,
                   { headers: { Authorization: `Bearer ${token}` } }
                 )
                 .then(function (response) {
-                  console.log("list");
+                  // console.log("list");
                   let res = response.data.data.rows.map(
                     ({ FileId, ...rest }) => ({ id: FileId, ...rest })
                   );
                   res.forEach((o) => {
                     o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
                   });
-                  console.log(res);
+                  // console.log(res);
                   setData(res);
                   setTotalCount(response.data.data.totalCount);
                 });
               setOpen(false);
             })
             .catch(function (error) {
-              console.log(error.response.status);
+              // console.log(error.response.status);
               if (error.response.status == 401) {
                 toast.error("You Have Been Logged Out !", {
                   position: "top-right",
@@ -322,7 +313,6 @@ export default function UploadList() {
             {/* <strong>Diamond List Management</strong> */}
           </div>
           <div className="col-sm-8 upload__button__wrapper">
-          
             <a
               className="download__template--btn btn"
               href="https://dse-sample-file.s3.ap-south-1.amazonaws.com/Templates.zip"
@@ -381,6 +371,7 @@ export default function UploadList() {
               title: "Date",
               field: "Time",
             },
+            { title: "Company", field: "company" },
             { title: "Status", field: "status" },
             { title: "Type", field: "type" },
             { title: "Total", field: "total_records" },
@@ -459,7 +450,7 @@ export default function UploadList() {
         <div className="pagination-wrapper">
           <Pagination
             activePage={activePage}
-            itemsCountPerPage={10}
+            itemsCountPerPage={50}
             totalItemsCount={totalCount}
             pageRangeDisplayed={5}
             onChange={handlePageChange}
