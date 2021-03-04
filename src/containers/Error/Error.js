@@ -83,7 +83,7 @@ export default function Error() {
       axios
         .get(
           DSE_URL +
-            `/admin/errorDiamonds?page=${page}&limit=5&vendor_id=${paramsObj.vendor_id}&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
+            `/admin/errorDiamonds?page=${page}&limit=50&vendor_id=${paramsObj.vendor_id}&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -339,7 +339,7 @@ export default function Error() {
         <div className="pagination-wrapper">
           <Pagination
             activePage={activePage}
-            itemsCountPerPage={5}
+            itemsCountPerPage={50}
             totalItemsCount={totalCount}
             pageRangeDisplayed={5}
             onChange={handlePageChange}
