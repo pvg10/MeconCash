@@ -123,9 +123,11 @@
     display: flex;
     width: 50%;
     margin: 0 auto;
-    justify-content: space-between;
+    padding: 0;
+    // justify-content: space-between;
     li {
       list-style: none;
+      width: 30%;
       a {
         text-decoration: none;
         text-transform: uppercase;

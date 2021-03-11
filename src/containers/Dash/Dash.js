@@ -29,6 +29,14 @@ function Dash() {
               component={LazyComponent.UploadLists}
               path="/fileUploads/upload-lists"
             />
+              <PrivateRoute
+               component={LazyComponent.PurchaseOrder}
+               path="/fileUploads/purchase-order"
+             />
+             <PrivateRoute
+               component={LazyComponent.PoLists}
+               path="/fileUploads/purchase-order-list"
+             />
             <PrivateRoute
               component={LazyComponent.Error}
               path="/fileUploads/errors"

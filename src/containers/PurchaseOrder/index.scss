@@ -1,0 +1,160 @@
+.first-row {
+  display: flex;
+  justify-content: space-between;
+}
+.bank-link {
+  display: flex;
+  justify-content: center;
+  font-size:18px;
+}
+.col2 {
+  width: 25%;
+}
+.terms__and__cond {
+  color: #007bff;
+  cursor: pointer;
+}
+.terms__and__cond:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.timer__container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  .time-wrapper {
+    font-size: 12px;
+}
+.timer__countdown__container {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+  text-align: center;
+  .countdown__circle {
+    padding: 0 2px;
+}
+}
+}
+.time-expire-row {
+  display: flex;
+  justify-content: flex-end;
+}
+.confirm-po {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  .MuiCheckbox-root{
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+.view-po-btn-container {
+    margin:20px 0;
+    .purchaseOrder{
+        margin-bottom: 10px;
+    }
+    .btn-container{ 
+        display: flex;
+        justify-content: space-between;
+         #cancelButton {
+           margin-right: 10px;
+         }
+        } 
+  }
+  th {
+    font-size: 12px !important;
+  }
+  .po-address {
+      display: flex;
+      justify-content:space-between;
+      .address-col {
+         p {
+              margin-bottom: 2px !important;
+      
+            }
+        }     
+      .po-address-from {
+          width: 25%;
+      }
+      .po-address-to {
+        width: 25%;
+    }
+  address {
+      height: 120px;
+      overflow: scroll;
+      border: 1px solid darkgray;
+      border-radius: 10px;
+      padding-left: 10px;
+  }
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.pagination-wrapper {
+  .pagination {
+    justify-content: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.pagination li {
+    display: inline-block;
+    width: 50px;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+  }
+  
+  ul.pagination li a {
+    text-decoration: none;
+    color: #337ab7;
+    font-size: 20px;
+  }
+  
+  ul.pagination li.active a {
+    color: white;
+  }
+  ul.pagination li.active {
+    background-color: #337ab7;
+  }
+  
+  ul.pagination li a:hover,
+  ul.pagination li a.active {
+    color: blue;
+  }
+  
+  .page-selection {
+    width: 48px;
+    height: 30px;
+    color: #337ab7;
+  }
+  
+  
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .ul_section {
+    margin-bottom: 15px;
+    .upload-list-title  {
+      text-transform: uppercase;
+    }
+    @media only screen and (max-width: 767px) {
+      margin-top: 10px;
+    }
+    select {
+      border: 0;
+      background-color: transparent;
+      outline: none;
+    }
+  }
