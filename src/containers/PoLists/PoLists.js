@@ -83,20 +83,7 @@ export default function PoLists() {
           return ele;
         });
         // console.log("nObj", nObj);
-        // if (draftStatusFlag) {
-        //   toast(
-        //     "Please confirm Draft Orders within 24 hours of our buying window.",
-        //     {
-        //       position: "top-center",
-        //       autoClose: false,
-        //       hideProgressBar: true,
-        //       closeOnClick: true,
-        //       pauseOnHover: false,
-        //       draggable: true,
-        //       progress: undefined,
-        //     }
-        //   );
-        // }
+       
         setPO(nObj);
         setTotalCount(response.data.data.totalCount);
       })
