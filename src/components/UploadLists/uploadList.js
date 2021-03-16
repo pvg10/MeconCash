@@ -119,11 +119,9 @@ export default function UploadList() {
     // console.log(token, "token>>>>>>>>>>>>>>123");
     // console.log(VendorID);
     axios
-      .get(
-        DSE_URL +
-          `/admin/vendorUploads?page=${page}&limit=50`,
-        { headers: { Authorization: `Bearer ${token}` } }
-      )
+      .get(DSE_URL + `/admin/vendorUploads?page=${page}&limit=50`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(function (response) {
         // console.log("list", response.data.data.rows);
         var data = response.data.data.rows;
@@ -158,10 +156,9 @@ export default function UploadList() {
     var token = localStorage.getItem("token");
     // console.log(token, "token>>>>>>>>>>>>>>148");
     axios
-      .get(
-        DSE_URL + "/admin/vendorUploads?page=1&limit=50",
-        { headers: { Authorization: `Bearer ${token}` } }
-      )
+      .get(DSE_URL + "/admin/vendorUploads?page=1&limit=50", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       .then(function (response) {
         // console.log("list", response.data.data.rows);
         var data = response.data.data.rows;
@@ -240,8 +237,7 @@ export default function UploadList() {
               console.log(token, "token>>>>>>>>>>>>>>206");
               axios
                 .get(
-                  DSE_URL +
-                    `/admin/vendorUploads?page=${activePage}&limit=50`,
+                  DSE_URL + `/admin/vendorUploads?page=${activePage}&limit=50`,
                   { headers: { Authorization: `Bearer ${token}` } }
                 )
                 .then(function (response) {
@@ -365,14 +361,32 @@ export default function UploadList() {
                 return (
                   <span
                     className="file__link"
-                    onClick={() => (window.location.href = rowData.url)}
+                    onClick={() => {
+                      axios
+                        .get(`${DSE_URL}/getPreAssignUrl?url=${rowData.url}`)
+                        .then(function (response) {
+                          // console.log('response', response.data.urls);
+                          window.location.href = response.data.urls;
+                        })
+                        .catch(function (error) {
+                          toast.error("Something Went Wrong !", {
+                            position: "top-right",
+                            autoClose: 3000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                          });
+                        });
+                    }}
                   >
                     {rowData.file_original_name}
                   </span>
                 );
               },
             },
-       
+
             { title: "Type", field: "type" },
             { title: "Status", field: "status" },
             { title: "Total", field: "total_records" },
@@ -426,7 +440,7 @@ export default function UploadList() {
             },
           ]}
         />
-        
+
         <div className="pagination-wrapper">
           <Pagination
             activePage={activePage}
