@@ -151,21 +151,58 @@ export default function Error() {
               title: "SKU",
               render: (rowData) => {
                 if (rowData.ds_parcel_sku) {
-                  return rowData.ds_parcel_sku;
+                  return rowData.ds_parcel_sku + ' ' + rowData.vendor_sku;
                 } else if (rowData.ds_diamond_sku) {
-                  return rowData.ds_diamond_sku;
+                  return rowData.ds_diamond_sku + ' ' + rowData.vendor_sku;
                 }
                 return;
               },
               cellStyle: {
-                width: "5%",
+                width: "12%",
+                border: "1px solid #e0e0e0",
+              },
+            },
+            {
+              title: "File Row Number",
+
+              render: (rowData) => {
+                let str = rowData.message;
+                var validation = str.substring(
+                  str.indexOf("Record No.:"),
+                  str.indexOf("Required Field Error : ")
+                );
+                let validationStr = validation.replace(
+                  "Required Field Error : ",
+                  ""
+                );
+                let propArr = validationStr.split("|");
+                console.log("propArr file row", propArr);
+                var validationArr = [];
+                validationArr = propArr.map((el) => {
+                  var key = el.split(":")[0];
+                  var val = el.split(":")[1];
+                  return { [key && key.trim()]: val && val.trim() };
+                });
+                validationArr = validationArr.filter(
+                  (value) =>
+                    Object.keys(value)[0] !== "" &&
+                    Object.keys(value)[0] !== "None"
+                );
+                return validationArr.map((el, i) => {
+                  // console.log('row', parseInt(el[Object.keys(el)[0]])+1)
+                  var rowNumber = parseInt(el[Object.keys(el)[0]]) + 1;
+                  return <div key={i}>{`${rowNumber}`}</div>;
+                });
+              },
+              cellStyle: {
+                width: "10%",
                 border: "1px solid #e0e0e0",
               },
             },
             {
               title: "Missing Field Errors",
               field: "",
-              cellStyle: { width: "15%", border: "1px solid #e0e0e0" },
+              cellStyle: { width: "12%", border: "1px solid #e0e0e0" },
               render: (rowData) => {
                 let str = rowData.message;
                 var validation = str.substring(
@@ -234,7 +271,7 @@ export default function Error() {
             },
             {
               title: "Allowed Value Errors",
-              cellStyle: { width: "40%", border: "1px solid #e0e0e0" },
+              cellStyle: { width: "30%", border: "1px solid #e0e0e0" },
               render: (rowData) => {
                 let str = rowData.message;
                 var validation = str.substring(
