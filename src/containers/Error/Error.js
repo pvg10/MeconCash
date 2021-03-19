@@ -71,6 +71,7 @@ export default function Error() {
     var url = window.location.href;
     // console.log("token 68", token);
     // var api = `/latestPurchaseOrder?vendor_id=${VendorID}`;
+    
     var [hashs, params] = url.split("#")[1].split("?");
 
     var o = new URLSearchParams(params);
@@ -78,12 +79,20 @@ export default function Error() {
     for (var [key, value] of o.entries()) {
       paramsObj[key] = value;
     }
+    var sortParam = "ds_diamond_sku";
+
     // console.log("sortParam ", sortParam);
+
+    if (paramsObj.type == "individual") {
+      sortParam = "ds_diamond_sku";
+    } else {
+      sortParam = "ds_parcel_sku";
+    }
     if (paramsObj.type && paramsObj.vendor_id && paramsObj.file_id) {
       axios
         .get(
           DSE_URL +
-            `/admin/errorDiamonds?page=${page}&limit=50&vendor_id=${paramsObj.vendor_id}&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
+            `/admin/errorDiamonds?page=${page}&limit=50&vendor_id=${paramsObj.vendor_id}&sort=${sortParam};asc&type=${paramsObj.type}&file_id=${paramsObj.file_id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -148,17 +157,27 @@ export default function Error() {
           icons={tableIcons}
           columns={[
             {
-              title: "SKU",
+              title: "DSE SKU",
               render: (rowData) => {
                 if (rowData.ds_parcel_sku) {
-                  return rowData.ds_parcel_sku + ' ' + rowData.vendor_sku;
+                  return rowData.ds_parcel_sku
                 } else if (rowData.ds_diamond_sku) {
-                  return rowData.ds_diamond_sku + ' ' + rowData.vendor_sku;
+                  return rowData.ds_diamond_sku
                 }
                 return;
               },
               cellStyle: {
                 width: "12%",
+                border: "1px solid #e0e0e0",
+              },
+            },
+            {
+              title: "Vendor SKU",
+              render: (rowData) => {
+                return rowData.vendor_sku
+              },
+              cellStyle: {
+                width: "10%",
                 border: "1px solid #e0e0e0",
               },
             },
