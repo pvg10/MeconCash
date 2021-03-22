@@ -92,6 +92,7 @@ export default function UploadList() {
         // console.log(res, "vpo");
         res.forEach((o) => {
           o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
+          o.uploadTime = moment(o.date_uploaded).format("HH:mm A");
         });
         setTotalCount(response.data.data.totalCount);
         setData(res);
@@ -129,6 +130,7 @@ export default function UploadList() {
         // console.log(res, "vpo");
         res.forEach((o) => {
           o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
+          o.uploadTime = moment(o.date_uploaded).format("HH:mm A");
         });
         setTotalCount(response.data.data.totalCount);
         setData(res);
@@ -166,6 +168,7 @@ export default function UploadList() {
         // console.log(res, "getData");
         res.forEach((o) => {
           o.Time = moment(o.date_uploaded).format("YYYY-MM-DD");
+          o.uploadTime = moment(o.date_uploaded).format("HH:mm A");
         });
         setData(res);
       })
@@ -349,8 +352,23 @@ export default function UploadList() {
             {
               title: "Date",
               field: "Time",
+              cellStyle: {
+                width: "10%",
+              },
             },
-            { title: "Company", field: "company" },
+            {
+              title: "Time",
+              field: "uploadTime",
+              cellStyle: {
+                width: "10%",
+              },
+            },
+            { title: "Company", field: "company",
+            cellStyle: {
+              width: "15%",
+            },
+          
+             },
             {
               title: "File",
               cellStyle: {
