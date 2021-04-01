@@ -16,6 +16,8 @@ import PrivateRoute from "../utils/PrivateRoute";
 import Header from "../containers/Header";
 import Footer from "../containers/Footer/Footer";
 import { StateMachineProvider, createStore } from "little-state-machine";
+import Login from "../containers/Login/Login";
+import Home from "../containers/Home/Home";
 
 const Routes = ({ lang }) => {
   // const location = useLocation();
@@ -47,13 +49,14 @@ const Routes = ({ lang }) => {
             <LazyComponent.Login path="/login" exact />
           
        
-            <PrivateRoute component={LazyComponent.Dash} path="/fileUploads" />
+            {/* <PrivateRoute component={LazyComponent.Dash} path="/fileUploads" /> */}
         
             <Route
               path="*"
               render={(props) => {
                 return props.match.url === "/" ? (
-                  <Redirect to="/login" />
+                  // <Redirect to="/login" />
+                  <Login/>
                 ) : (
                   <Redirect to="/404" />
                 );
@@ -61,10 +64,11 @@ const Routes = ({ lang }) => {
             />
 
             <PrivateRoute exact path="/">
-              <Redirect to="/login" />
+              {/* <Redirect to="/login" /> */}
+              <Login/>
             </PrivateRoute>
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
        
         </HashRouter>
       </StateMachineProvider>

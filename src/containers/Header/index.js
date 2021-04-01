@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 // import messages from "./../../assets/Local/messages";
 import { connect } from "react-redux";
 import { NavLink as Link } from "react-router-dom";
-import { Dropdown } from "react-bootstrap";
-import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
+// import { Dropdown } from "react-bootstrap";
+import { faExchangeAlt, faCoins } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
 import History from "../../routes/History";
@@ -14,7 +14,15 @@ import { deepPurple } from "@material-ui/core/colors";
 import Avatar from "@material-ui/core/Avatar";
 import axios from "axios";
 import { DSE_URL } from "../../utils/Constants";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import Dropdown from "react-bootstrap/Dropdown";
+import Select from 'react-select';
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+];
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -34,6 +42,7 @@ function Header(props) {
   // const message = messages[lang];
   const user = useSelector((state) => state.User.user);
   const [isbase, setBase] = useState(false);
+  const [option, setOption] = useState(null)
   // const user = "Admin";
   const classes = useStyles();
   let avatarChars = "A";
@@ -42,6 +51,10 @@ function Header(props) {
 
     setBase(base);
   }, []);
+ function handleChange(selectedOption) {
+    setOption({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
   // var isbase = window.location.href.includes("/fileUploads");
   // console.log("isbase route", isbase)
   function logout() {
@@ -58,18 +71,64 @@ function Header(props) {
       });
   }
   return (
-    <header className="container">
-      <section className="top__section">
+    <header>
+      <section className="top__section container">
         <div>
           <Link to="/login">
             <img
-              src={process.env.PUBLIC_URL + "/logo/DSELogo.png"}
+              src={process.env.PUBLIC_URL + "/logo/v1.png"}
               alt="company-logo"
               className="company-logo"
             />
           </Link>
         </div>
-      
+        {/* <div> */}
+
+        {/* </div> */}
+        <div className="header-options">
+          <ul>
+            <li>
+              <AnchorLink offset="100" href="#about">
+                About
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink offset="100" href="#features">
+                Features
+              </AnchorLink>
+            </li>
+
+            <li>
+              <AnchorLink href="#works">How It Works</AnchorLink>
+            </li>
+            <li>
+              <AnchorLink offset="100" href="#faq">
+                FAQ
+              </AnchorLink>
+            </li>
+          </ul>
+          <div style={{ display: "flex", margin:'unset' }} className="form-group">
+          {/* <img src={process.env.PUBLIC_URL + "/ic-security.jpg"}/> */}
+
+            <button type="button" className="btn btn-dark" style={{marginRight:'10px'}}>
+              Launch
+            </button>
+            <div >
+            {/* <Select
+        value={option}
+        onChange={handleChange}
+        options={options}
+      /> */}
+              <select className="form-control" id="languageSelect">
+              <option data-content= "<img src='/united-kingdom.png'/>"
+              value="ENG">ENG</option>
+   
+              </select>
+              
+            </div>
+            
+          </div>
+        </div>
       </section>
     </header>
   );

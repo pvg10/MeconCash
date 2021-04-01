@@ -1,6 +1,7 @@
 body {
-  height: 100vh;
+  background-color: #1e1e79;
 }
+
 #example-3 {
   font-size: 14px;
 }
@@ -21,8 +22,35 @@ body {
   color: #ff0000;
   font-size: 14px;
 }
+#container {
+  border: 1px solid;
+  padding: 5px;
+  // height: 200px;
+}
+
+#title {
+  float: left;
+  padding: 0 5px;
+  margin: -20px 0 0 30px;
+  background: #1e1e79;
+}
 
 .login-page {
+  // height: 1200px;
+  // height: calc(100% - 50px);
+  // color: #000;
+  // fieldset {
+  //   border: 1px solid #fff;
+  // }
+  .btn-dark {
+    background-color: #FAAD53 !important;
+    border-color: #faad53;
+    border-radius: 15px !important;
+    width: 120px;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px !important;
+  }
   .login-page__logo {
     text-align: center;
     margin-top: 8%;

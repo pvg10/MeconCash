@@ -1,7 +1,57 @@
+
+  
+
+header {
+  // background-color: #0A1D5C;
+  margin-bottom: 30px;
+}
 .top__section {
+  .btn-dark, #languageSelect 
+  {
+  background-color: #150348 !important;
+  border-radius: 15px !important;
+  width: 150px;
+  color: #fff;
+  font-size: 14px !important;
+  border-color: #150348 ;
+}
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+  .header-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    // margin: 0 auto;
+    padding: 0;
+    margin: unset;
+    // justify-content: space-between;
+    li {
+      list-style: none;
+      // width: 20%;
+      margin-right: 20px;
+      a {
+        text-decoration: none;
+        // text-transform: uppercase;
+        color: #fff;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      a:active {
+        text-decoration: underline;
+      }
+    }
+  }
   .login-btn {
     display: flex;
     align-items: center;

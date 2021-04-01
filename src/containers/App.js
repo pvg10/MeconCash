@@ -20,18 +20,18 @@ class App extends React.Component {
     console.log('lang',lang);
     return (
       <IntlProvider locale={lang} messages={messages[lang]}>
-        <div
+        {/* <div
           className={lang === "ar" ? "rtl" : "ltr"}
           dir={lang === "ar" ? "rtl" : "ltr"}
-        >
-          {loading ? <Loader /> : null}
+        > */}
+          {/* {loading ? <Loader /> : null} */}
           <HashRouter history={history}>
             <MaterialSnackbar />
              {/* <Navbar /> */}
             <Routes lang={lang} />
             {/* {<Login />} */}
           </HashRouter>
-        </div>
+        {/* </div> */}
       </IntlProvider>
     );
   }

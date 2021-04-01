@@ -63,7 +63,7 @@ function Header(props) {
         <div>
           <Link to="/fileUploads">
             <img
-              src={process.env.PUBLIC_URL + "/logo/DSELogo.png"}
+              src={process.env.PUBLIC_URL + "/logo/meconcash-logo.png"}
               alt="company-logo"
               className="company-logo"
             />
