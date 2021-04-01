@@ -74,7 +74,7 @@ function Header(props) {
     <header>
       <section className="top__section container">
         <div>
-          <Link to="/login">
+          <Link to="#">
             <img
               src={process.env.PUBLIC_URL + "/logo/v1.png"}
               alt="company-logo"

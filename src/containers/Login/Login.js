@@ -36,13 +36,17 @@ const faqs = {
         "Using Layer 2 for transactions allows us for seamless transfers for our customers with close to zero gas fees included. With the average time of transaction being around 30 seconds and the cost of over $6 for Ethereum on various exchanges available on the market, we were able to make it literally free with our gas station network and approximately 1~2 seconds for an average transaction.",
     },
     {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
+      title: "Who can use MCFinance?",
       content:
         "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc",
     },
     {
-      title: "What is the package version",
-      content: "v1.0.5",
+      title: "How can I make money with MCFinance?",
+      content: "Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur"
+    },
+    {
+      title: "What is the MCF token?",
+      content: "Lorem ipsum dolor sit amet, consectetur",
     },
   ],
 };
