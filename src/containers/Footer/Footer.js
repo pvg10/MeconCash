@@ -23,11 +23,12 @@ function Footer() {
       <div className="footer__bottom__section">
         <div className="container">
           <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-            }}
+          className="footer-text"
+            // style={{
+            //   display: "flex",
+            //   justifyContent: "flex-start",
+            //   alignItems: "center",
+            // }}
           >
             {/* <div>&#169; 2021 MeconCash.All Rights Reserved.</div> */}
             <div style={{ width: "200px" }}>
