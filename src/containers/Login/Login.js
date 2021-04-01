@@ -13,7 +13,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 // import Grid from "@material-ui/core/Grid";
 // import EmailIcon from "@material-ui/icons/Email";
 // import { TextField } from "@material-ui/core";
-import Faq from 'react-faq-component';
+import Faq from "react-faq-component";
 
 import { DSE_URL } from "../../utils/Constants";
 import { toast } from "react-toastify";
@@ -28,21 +28,24 @@ const faqs = {
   rows: [
     {
       title: "What is a decentralized exchange, and what makes it different?",
-      content: "Lorem ipsum dolor sit amet, consectetur "
+      content: "Lorem ipsum dolor sit amet, consectetur ",
     },
     {
       title: "How does your trading price and speed compare to others?",
-      content: "Using Layer 2 for transactions allows us for seamless transfers for our customers with close to zero gas fees included. With the average time of transaction being around 30 seconds and the cost of over $6 for Ethereum on various exchanges available on the market, we were able to make it literally free with our gas station network and approximately 1~2 seconds for an average transaction."
+      content:
+        "Using Layer 2 for transactions allows us for seamless transfers for our customers with close to zero gas fees included. With the average time of transaction being around 30 seconds and the cost of over $6 for Ethereum on various exchanges available on the market, we were able to make it literally free with our gas station network and approximately 1~2 seconds for an average transaction.",
     },
     {
       title: "Curabitur laoreet, mauris vel blandit fringilla",
-      content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
+      content:
+        "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc",
     },
     {
       title: "What is the package version",
-      content: "v1.0.5"
-    }]
-}
+      content: "v1.0.5",
+    },
+  ],
+};
 function Login() {
   const dispatch = useDispatch();
 
@@ -316,7 +319,8 @@ function Login() {
                     decentralized style!
                   </p>
                 </div>
-                <div className="box4"><p className="security">
+                <div className="box4">
+                  <p className="security">
                     <img src="/ic4.png" />
                   </p>
                   <h4
@@ -329,243 +333,33 @@ function Login() {
                     Security first
                   </h4>
                   <p style={{ color: "#000", fontSize: "12px" }}>
-                  Implementing Matic PoS Chain, a permissionless, EVM-compatible, PoS-secured Ethereum sidechain which relies on strong Ethereum security for validator staking and checkpoints.
-
-                  </p></div>
+                    Implementing Matic PoS Chain, a permissionless,
+                    EVM-compatible, PoS-secured Ethereum sidechain which relies
+                    on strong Ethereum security for validator staking and
+                    checkpoints.
+                  </p>
+                </div>
               </div>
             </div>
-            {/* <div className="box" style={{background: 'red'}}></div>
-          <div className="box stack-top" style={{background: 'blue'}}></div>
-          <div className="box" style={{background: 'yellow'}}></div> */}
           </div>
         </div>
-        {/* <div className="box-1"></div> */}
       </section>
-
-      {/* <br /> */}
-      <section id="faq"  className = "faq" style={{ background: "url(/faq.png)" }}>
-        <div class="container">
-          <div class="section-title">
-          <h4 className="text-center pt-5">FAQ</h4>
-          <Faq data={faqs} />
-            {/* <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
-            </p> */}
-          </div>
-
-          {/* <div class="faq-list"> */}
-            {/* <ul>
-              <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li>
-              <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li> <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li> <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li> <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li> <li data-aos="fade-up">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" class="collapse" href="#faq-list-1">
-                  Non consectetur a erat nam at lectus urna duis?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div
-                  id="faq-list-1"
-                  class="collapse show"
-                  data-parent=".faq-list"
-                >
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis
-                    lectus magna fringilla urna porttitor rhoncus dolor purus
-                    non.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" href="#faq-list-2" class="collapsed">
-                  Feugiat scelerisque varius morbi enim nunc?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div id="faq-list-2" class="collapse" data-parent=".faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque
-                    habitant morbi. Id interdum velit laoreet id donec ultrices.
-                    Fringilla phasellus faucibus scelerisque eleifend donec
-                    pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                    ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" href="#faq-list-3" class="collapsed">
-                  Dolor sit amet consectetur adipiscing elit?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div id="faq-list-3" class="collapse" data-parent=".faq-list">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                    nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                    pellentesque eu tincidunt. Lectus urna duis convallis
-                    convallis tellus. Urna molestie at elementum eu facilisis
-                    sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" href="#faq-list-4" class="collapsed">
-                  Tempus quam pellentesque nec nam aliquam sem et tortor
-                  consequat? <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div id="faq-list-4" class="collapse" data-parent=".faq-list">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo.
-                    Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                    viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                    bibendum est. Purus gravida quis blandit turpis cursus in.
-                  </p>
-                </div>
-              </li>
-
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i>{" "}
-                <a data-toggle="collapse" href="#faq-list-5" class="collapsed">
-                  Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                  turpis nunc eget lorem dolor?{" "}
-                  <i class="bx bx-chevron-down icon-show"></i>
-                  <i class="bx bx-chevron-up icon-close"></i>
-                </a>
-                <div id="faq-list-5" class="collapse" data-parent=".faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo.
-                    Mauris vitae ultricies leo integer malesuada nunc vel.
-                    Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                    eget lorem dolor sed. Ut venenatis tellus in metus vulputate
-                    eu scelerisque.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div> */}
-        </div>
-        <Footer />
-
-      </section>
-      {/* <section id="faq" style={{ background: "url(/faq.png)" }}>
-        <div className="container">
-
-        <div className="row">
-          <div className="col-sm-12">
-            <div id="" style={{ height: "500px" }}>
-              <p></p>
+      <div
+        style={{
+          background: "url(/faq-bg.png) no-repeat center",
+          backgroundSize: "cover",
+        }}
+      >
+        <section id="faq" className="faq">
+          <div className="container">
+            <div className="section-title">
+              <h4 className="text-center pt-5">FAQ</h4>
+              <Faq data={faqs} />
             </div>
           </div>
-        </div>
-        </div>
+        </section>
         <Footer />
-      </section> */}
+      </div>
     </>
   );
 }

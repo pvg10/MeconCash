@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Footer() {
   return (
-    <div className="footer navbar-fixed-bottom">
+    <div className="footer ">
       {/* <div className="footer__top__section">
         <div className="contact__footer">
           For any queries please contact
