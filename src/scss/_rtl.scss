@@ -21,10 +21,17 @@
     text-align: left;
     border-radius: 10px;
     background: #fff;
-    box-shadow: 0px 10px 20px 0px #d2dadf !important; 
+    box-shadow: 0px 10px 20px 0px #d2dadf !important;
     padding: 30px 30px;
     width: 100%;
     height: auto;
+    h4 {
+      font-family: "Poppins", sans-serif;
+      font-style: "normal";
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 150%;
+    }
     .security {
       width: 90px;
       height: 90px;
@@ -63,6 +70,13 @@
     }
   }
 }
+#about {
+  .mcf {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
 #works {
   position: relative;
   margin: 0;
@@ -77,7 +91,7 @@
     border-radius: 10px;
     background: #fff;
     // box-shadow: 0px 2px 15px;
-    border: 1px dotted #133F95;
+    border: 1px dotted #133f95;
     padding: 30px 30px;
     width: 450px;
     height: 250px;
@@ -100,7 +114,7 @@
     z-index: 999;
     text-align: left;
     border-radius: 10px;
-    border: 1px dotted #133F95;
+    border: 1px dotted #133f95;
     background-color: #fff;
     padding: 30px 30px;
     width: 450px;
@@ -128,12 +142,11 @@
     border-radius: 10px;
     background: #fff;
     // box-shadow: 0px 2px 15px;
-    border: 1px dotted #133F95;
+    border: 1px dotted #133f95;
     padding: 30px 30px;
     width: 450px;
     height: 250px;
     .speed {
-      
       width: 60px;
       height: 60px;
       left: 165px;
@@ -155,7 +168,7 @@
     border-radius: 10px;
     background: #fff;
     // box-shadow: 0px 2px 15px;
-    border: 1px dotted #133F95;
+    border: 1px dotted #133f95;
     padding: 30px 30px;
     width: 450px;
     height: 250px;
@@ -165,7 +178,7 @@
       left: 165px;
       top: 704px;
       // background: #133f95;
-      background: #B647DD;
+      background: #b647dd;
       // box-shadow: 0px 8px 16px rgb(19 63 149 / 25%);
       border-radius: 15px;
       display: flex;

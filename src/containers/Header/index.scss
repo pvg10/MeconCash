@@ -4,15 +4,17 @@
 header {
   // background-color: #0A1D5C;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 .top__section {
   .btn-dark, #languageSelect 
   {
   background-color: #150348 !important;
   border-radius: 15px !important;
-  width: 150px;
+  width: 170px;
   color: #fff;
   font-size: 14px !important;
+  font-weight: 500;
   border-color: #150348 ;
 }
   display: flex;
@@ -44,7 +46,7 @@ header {
         text-decoration: none;
         // text-transform: uppercase;
         color: #fff;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 14px;
       }
       a:active {

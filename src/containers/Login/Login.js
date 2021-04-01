@@ -122,7 +122,7 @@ function Login() {
                     className="image-box"
                     // style={{ border: "1px solid", height: "95%" }}
                   >
-                    <p style={{ fontSize: "36px", fontWeight: "600" }}>
+                    <p className="mcf" >
                       MCF DEX
                     </p>
                     <p>
