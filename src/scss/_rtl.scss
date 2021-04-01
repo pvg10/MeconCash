@@ -208,6 +208,23 @@
 #faq {
   color: white;
   height: 800px;
+  h4 {
+    font-family: "Poppins", sans-serif; 
+  font-weight: 700;
+font-size: 36px; }
+  .faq-row-wrapper {
+    background: transparent;
+    margin-top: 50px;
+  }
+  .faq-row{
+    padding: 3px 15px;
+    margin-bottom: 24px;
+    background: white;
+    border-radius: 5px;
+  }
+  .row-content-text {
+    border-top: 1px solid #e3decf;
+  }
 }
 .ltr {
   // height: 100vh;
