@@ -261,7 +261,7 @@ function Login() {
                 MCFinance is here to shake the status quo and take you to the
                 future of decentralized finance.
               </p>
-              <div>
+              <div className="box-container">
                 <div className="box1">
                   <p className="security">
                     <img src="/ic.png" />
@@ -270,7 +270,7 @@ function Login() {
                     style={{
                       color: "#133F95",
                       fontWeight: "700",
-                      fontSize: "20px",
+                      // fontSize: "20px",
                     }}
                   >
                     The power is in your hands
