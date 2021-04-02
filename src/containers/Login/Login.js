@@ -418,8 +418,7 @@ function Login() {
                         className="btn btn-link collapsed"
                         aria-controls="collapseTwo"
                       >
-                        What is a decentralized exchange, and what makes it
-                        different?
+                        How does your trading price and speed compare to others?
                       </button>
                     </h5>
                   </div>
