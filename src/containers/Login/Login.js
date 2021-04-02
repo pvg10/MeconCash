@@ -429,6 +429,32 @@ function Login() {
                         data-parent="#faq"
                       >
                         <div className="card-body">
+                        Using Layer 2 for transactions allows us for seamless transfers for our customers with close to zero gas fees included. With the average time of transaction being around 30 seconds and the cost of over $6 for Ethereum on various exchanges available on the market, we were able to make it literally free with our gas station network and approximately 1~2 seconds for an average transaction.
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card">
+                      <div className="card-header" id="faqhead1">
+                        <a
+                          href="#"
+                          className="btn btn-header-link"
+                          data-toggle="collapse"
+                          data-target="#faq5"
+                          aria-expanded="true"
+                          aria-controls="faq1"
+                        >
+                          {" "}
+                          Who can use MCFinance?
+                        </a>
+                      </div>
+
+                      <div
+                        id="faq5"
+                        className="collapse"
+                        aria-labelledby="faqhead1"
+                        data-parent="#faq"
+                      >
+                        <div className="card-body">
                           Anim pariatur cliche reprehenderit, enim eiusmod high
                           life accusamus terry richardson ad squid. 3 wolf moon
                           officia aute, non cupidatat skateboard dolor brunch.
