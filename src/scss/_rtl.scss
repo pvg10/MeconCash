@@ -284,6 +284,15 @@ html {
   // padding: 30px;
   width: 100%;
   #faq {
+    .btn-link:hover,.btn-link:focus, .btn-link.focus {
+      text-decoration: none;
+  }
+
+  
+  .btn:focus, .btn.focus {
+      outline: 0;
+      box-shadow: none;
+  }
     #accordion {
       color: black;
     }
@@ -292,6 +301,7 @@ html {
     }
     .card-header {
       border-bottom: none !important;
+      background: #fff !important;
     }
    .card-header, .row-title-text {
      button {
