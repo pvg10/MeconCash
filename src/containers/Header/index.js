@@ -150,13 +150,13 @@ function Header(props) {
                 </option>
               </Select> */}
               <ReactFlagsSelect
-                countries={["US", "GB", "FR", "DE", "IT"]}
+                countries={["US", "GB"]}
                 customLabels={{
                   GB: "ENG",
                   US: "EN-US",
-                  FR: "FR",
-                  DE: "DE",
-                  IT: "IT",
+                  // FR: "FR",
+                  // DE: "DE",
+                  // IT: "IT",
                 }}
                 defaultCountry="GB"
                 onSelect={code => setSelected(code)}

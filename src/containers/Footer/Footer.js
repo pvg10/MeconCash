@@ -22,6 +22,8 @@ function Footer() {
       </div> */}
       <div className="footer__bottom__section">
         <div className="container">
+        <hr style={{marginTop:'345px'}} />
+
           <div
           className="footer-text"
             // style={{

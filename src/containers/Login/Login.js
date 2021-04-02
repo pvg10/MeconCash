@@ -89,29 +89,29 @@ function Login() {
   const { actions, state } = useStateMachine({ clearAction });
 
   // const useStyles = makeStyles((theme) => ({
-  //   root: {
-  //     display: "flex",
-  //     flexWrap: "wrap",
-  //   },
-  //   margin: {
-  //     margin: theme.spacing(1),
-  //   },
-  //   withoutLabel: {
-  //     marginTop: theme.spacing(3),
-  //   },
-  //   textField: {
-  //     width: "25ch",
-  //   },
+  // root: {
+  // display: "flex",
+  // flexWrap: "wrap",
+  // },
+  // margin: {
+  // margin: theme.spacing(1),
+  // },
+  // withoutLabel: {
+  // marginTop: theme.spacing(3),
+  // },
+  // textField: {
+  // width: "25ch",
+  // },
   // }));
   // const classes = useStyles();
 
   // const onUserNameChange = (e) => {
-  //   e.stopPropagation();
-  //   setUserName(e.currentTarget.value);
+  // e.stopPropagation();
+  // setUserName(e.currentTarget.value);
   // };
   // const onPasswordChange = (e) => {
-  //   e.stopPropagation();
-  //   setPassword(e.currentTarget.value);
+  // e.stopPropagation();
+  // setPassword(e.currentTarget.value);
   // };
 
   return (
@@ -142,7 +142,6 @@ function Login() {
                       </p>
                     </div>
                     <p>
-                      {/* FAAD53 */}
                       <button
                         type="button"
                         style={{ backgroundColor: "#FAAD53 !important" }}
@@ -161,7 +160,7 @@ function Login() {
                 </div>
               </div>
             </div>
-            {/* <h2>About</h2> */}
+            {/* <h2>About</h2>  */}
           </section>
         </div>
       </div>
@@ -364,8 +363,8 @@ function Login() {
             <div className="section-title">
               <h4 className="text-center pt-5">FAQ</h4>
               {/* <Faq data={faqs} config = {{
-                animate :true,}
-              }/> */}
+animate :true,}
+}/> */}
               <div id="main">
                 <div className="container">
                   <div className="accordion" id="faq">
@@ -429,7 +428,14 @@ function Login() {
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                        Using Layer 2 for transactions allows us for seamless transfers for our customers with close to zero gas fees included. With the average time of transaction being around 30 seconds and the cost of over $6 for Ethereum on various exchanges available on the market, we were able to make it literally free with our gas station network and approximately 1~2 seconds for an average transaction.
+                          Using Layer 2 for transactions allows us for seamless
+                          transfers for our customers with close to zero gas
+                          fees included. With the average time of transaction
+                          being around 30 seconds and the cost of over $6 for
+                          Ethereum on various exchanges available on the market,
+                          we were able to make it literally free with our gas
+                          station network and approximately 1~2 seconds for an
+                          average transaction.
                         </div>
                       </div>
                     </div>
@@ -550,8 +556,6 @@ function Login() {
             </div>
           </div>
         </section>
-      <hr style={{marginTop:'345px'}} />
-
       </div>
       <Footer />
     </>
