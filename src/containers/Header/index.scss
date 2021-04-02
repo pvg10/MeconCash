@@ -1,25 +1,50 @@
-
-  
-
 header {
   // background-color: #0A1D5C;
   margin-bottom: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 .top__section {
-  .btn-dark, #languageSelect 
-  {
-  background-color: #150348 !important;
-  border-radius: 20px !important;
-  width: 150px;
-  height: 40px;
-  // padding: 10px;
-  // height: 0px;
-  color: #fff;
-  font-size: 14px !important;
-  font-weight: 500;
-  border-color: #150348 ;
-}
+  .btn-dark,
+  .lang__select button {
+    background-color: #150348 !important;
+    border-radius: 20px !important;
+    width: 150px;
+    height: 40px;
+    // padding: 10px;
+    // height: 0px;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 500;
+    border-color: #150348;
+  }
+  .lang__select {
+    button {
+      padding: 0 28px;
+      span {
+        padding: 0;
+        margin: 0;
+        white-space: initial;
+        .ReactFlagsSelect-module_selectFlag__2q5gC {
+          margin-right: 5px;
+          // svg {
+          //   margin: 0;
+          //   width: 1.5em;
+          //   height: 1.5em;
+          // }
+        }
+      }
+    }
+    ul {
+      display: block;
+      width: 100%;
+      margin: 2px 0 0;
+      background-color: #181948;
+      border: 0;
+      li {
+        margin: 0;
+      }
+    }
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,7 +154,7 @@ header {
     }
     .btn-primary:active {
       box-shadow: none !important;
-      background-color: transparent !important; 
+      background-color: transparent !important;
     }
     .btn-primary:focus,
     .btn-primary.focus {

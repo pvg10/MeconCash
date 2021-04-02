@@ -17,12 +17,29 @@ import { DSE_URL } from "../../utils/Constants";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-import Select from 'react-select';
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+// import Select, { components } from "react-select";
+import ReactFlagsSelect from "react-flags-select";
+
+const customLabels = {
+  GB: "GB",
+  US: "US",
+};
+// const options = [
+//   { value: "England", label: "England", icon: "united-kingdom.png" },
+// ];
+// const { Option } = components;
+
+// const IconOption = props => (
+//   <Option {...props}>
+//     <img
+//       src={require('/public/' + props.data.icon)}
+//       style={{ width: 36 }}
+//       alt={props.data.label}
+//     />
+//     {props.data.label}
+//   </Option>
+// );
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -42,7 +59,8 @@ function Header(props) {
   // const message = messages[lang];
   const user = useSelector((state) => state.User.user);
   const [isbase, setBase] = useState(false);
-  const [option, setOption] = useState(null)
+  const [option, setOption] = useState(null);
+  const [selected, setSelected] = useState("");
   // const user = "Admin";
   const classes = useStyles();
   let avatarChars = "A";
@@ -51,10 +69,10 @@ function Header(props) {
 
     setBase(base);
   }, []);
- function handleChange(selectedOption) {
+  function handleChange(selectedOption) {
     setOption({ selectedOption });
     console.log(`Option selected:`, selectedOption);
-  };
+  }
   // var isbase = window.location.href.includes("/fileUploads");
   // console.log("isbase route", isbase)
   function logout() {
@@ -82,9 +100,6 @@ function Header(props) {
             />
           </Link>
         </div>
-        {/* <div> */}
-
-        {/* </div> */}
         <div className="header-options">
           <ul>
             <li>
@@ -107,26 +122,48 @@ function Header(props) {
               </AnchorLink>
             </li>
           </ul>
-          <div style={{ display: "flex", margin:'unset' }} className="form-group">
-          {/* <img src={process.env.PUBLIC_URL + "/ic-security.jpg"}/> */}
-
-            <button type="button" className="btn btn-dark" style={{marginRight:'10px'}}>
+          <div
+            style={{ display: "flex", margin: "unset" }}
+            className="form-group"
+          >
+            <button
+              type="button"
+              className="btn btn-dark"
+              style={{ marginRight: "10px" }}
+            >
               Launch
             </button>
-            <div >
-            {/* <Select
-        value={option}
-        onChange={handleChange}
-        options={options}
-      /> */}
-              <select className="form-control" id="languageSelect">
-              <option data-content= "<img src='/united-kingdom.png'/>"
-              value="ENG">ENG</option>
-   
-              </select>
-              
+            <div className="lang__select">
+              {/* <Select
+                defaultValue={options[0]}
+                options={options}
+                components={{ Option: IconOption }}
+                className="lang__select"
+                id="languageSelect"
+              /> */}
+              {/* <Select className="form-control" id="languageSelect">
+                <option
+                  data-content="<img src='/united-kingdom.png'/>"
+                  value="ENG"
+                >
+                  ENG
+                </option>
+              </Select> */}
+              <ReactFlagsSelect
+                countries={["US", "GB", "FR", "DE", "IT"]}
+                customLabels={{
+                  GB: "ENG",
+                  US: "EN-US",
+                  FR: "FR",
+                  DE: "DE",
+                  IT: "IT",
+                }}
+                defaultCountry="GB"
+                onSelect={code => setSelected(code)}
+                selected={"GB"}
+                // selectedSize={14}
+              />
             </div>
-            
           </div>
         </div>
       </section>
