@@ -369,12 +369,14 @@ function Login() {
               <div id="accordion">
                 <div className="card">
                   <div className="card-header" id="headingOne">
-                    <h5 className="mb-0">
+                    <h5
+                      className="mb-0"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                    >
                       <button
                         className="btn btn-link"
-                        data-toggle="collapse"
-                        data-target="#collapseOne"
-                        aria-expanded="true"
                         aria-controls="collapseOne"
                       >
                         What is a decentralized exchange, and what makes it
@@ -385,7 +387,7 @@ function Login() {
 
                   <div
                     id="collapseOne"
-                    className="collapse show"
+                    className="collapse show container"
                     aria-labelledby="headingOne"
                     data-parent="#accordion"
                   >
@@ -406,12 +408,14 @@ function Login() {
                 </div>
                 <div className="card">
                   <div className="card-header" id="headingTwo">
-                    <h5 className="mb-0">
+                    <h5
+                      className="mb-0 "
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                    >
                       <button
                         className="btn btn-link collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseTwo"
-                        aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
                         What is a decentralized exchange, and what makes it
@@ -421,7 +425,7 @@ function Login() {
                   </div>
                   <div
                     id="collapseTwo"
-                    className="collapse"
+                    className="collapse container"
                     aria-labelledby="headingTwo"
                     data-parent="#accordion"
                   >
@@ -438,12 +442,14 @@ function Login() {
                 </div>
                 <div className="card">
                   <div className="card-header" id="headingThree">
-                    <h5 className="mb-0">
+                    <h5
+                      className="mb-0"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                    >
                       <button
                         className="btn btn-link collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseThree"
-                        aria-expanded="false"
                         aria-controls="collapseThree"
                       >
                         How can I make money with MCFinance?
@@ -473,13 +479,16 @@ function Login() {
                 </div>
                 <div className="card">
                   <div className="card-header" id="headingThree">
-                    <h5 className="mb-0">
+                    <h5
+                      className="mb-0 "
+                      data-toggle="collapse"
+                      data-target="#collapseFour"
+                      aria-expanded="false"
+                    >
                       <button
                         className="btn btn-link collapsed"
-                        data-toggle="collapse"
-                        data-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
+
+                        // aria-controls="collapseThree"
                       >
                         What is the MCF token?
                       </button>
@@ -487,7 +496,7 @@ function Login() {
                   </div>
                   <div
                     id="collapseFour"
-                    className="collapse"
+                    className="collapse container"
                     aria-labelledby="headingThree"
                     data-parent="#accordion"
                   >

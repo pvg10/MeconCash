@@ -290,7 +290,9 @@ html {
     .card {
       margin-top: 20px;
     }
-    
+    .card-header {
+      border-bottom: none !important;
+    }
    .card-header, .row-title-text {
      button {
        color: black !important;
@@ -335,7 +337,7 @@ html {
       letter-spacing: 0em !important;
       // text-align: left !important;
 
-      // border-top: 1px solid #e3decf;
+      border-top: 1px solid #e3decf;
       margin-top: 5px;
       // padding: 20px 0px;
       color: #7f8385;
