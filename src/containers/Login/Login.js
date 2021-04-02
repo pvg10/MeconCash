@@ -550,6 +550,8 @@ function Login() {
             </div>
           </div>
         </section>
+      <hr style={{marginTop:'345px'}} />
+
       </div>
       <Footer />
     </>
