@@ -368,11 +368,11 @@ function Login() {
               }/> */}
               <div id="accordion">
                 <div className="card">
-                  <div className="card-header" id="headingOne">
+                  <div className="card-header"  data-toggle="collapse"
+                      data-target="#collapseOne" id="headingOne">
                     <h5
                       className="mb-0"
-                      data-toggle="collapse"
-                      data-target="#collapseOne"
+                     
                       aria-expanded="true"
                     >
                       <button
@@ -407,11 +407,11 @@ function Login() {
                   </div>
                 </div>
                 <div className="card">
-                  <div className="card-header" id="headingTwo">
+                  <div className="card-header"  data-toggle="collapse"
+                      data-target="#collapseTwo" id="headingTwo">
                     <h5
                       className="mb-0 "
-                      data-toggle="collapse"
-                      data-target="#collapseTwo"
+                     
                       aria-expanded="false"
                     >
                       <button
@@ -440,11 +440,11 @@ function Login() {
                   </div>
                 </div>
                 <div className="card">
-                  <div className="card-header" id="headingThree">
+                  <div className="card-header"   data-toggle="collapse"
+                      data-target="#collapseThree" id="headingThree">
                     <h5
                       className="mb-0"
-                      data-toggle="collapse"
-                      data-target="#collapseThree"
+                     
                       aria-expanded="false"
                     >
                       <button
@@ -477,11 +477,11 @@ function Login() {
                   </div>
                 </div>
                 <div className="card">
-                  <div className="card-header" id="headingThree">
+                  <div className="card-header"   data-toggle="collapse"
+                      data-target="#collapseFour" id="headingFour">
                     <h5
                       className="mb-0 "
-                      data-toggle="collapse"
-                      data-target="#collapseFour"
+                     
                       aria-expanded="false"
                     >
                       <button
