@@ -129,6 +129,8 @@ function Login() {
                     <p className="mcf" >
                       MCF DEX
                     </p>
+                    <div className="mcf-content">
+
                     <p>
                       MCFinance is a decentralized exchange giving the power
                       back to the people.
@@ -140,6 +142,7 @@ function Login() {
                       tokens, creating an environment where you can get the most
                       out of every block.
                     </p>
+                    </div>
                     <p>
                       {/* FAAD53 */}
                       <button
@@ -185,7 +188,7 @@ function Login() {
                       >
                         Security
                       </h4>
-                      <p style={{ color: "#7F8385", fontSize: "14px" }}>
+                      <p  style={{ color: "#7F8385", fontSize: "14px" }}>
                         MCF DEX is able to achieve both scalibilty and security
                         with Polygon's layer 2 scaling solution that uses
                         sidechains for off-chain computation while ensuring
@@ -272,7 +275,7 @@ function Login() {
                   >
                     The power is in your hands
                   </h4>
-                  <p style={{ color: "#000", fontSize: "12px" }}>
+                  <p className="icon-box-content" >
                     MCF DEX is able to achieve both scalibilty and security with
                     Polygon's layer 2 scaling solution that uses sidechains for
                     off-chain computation while ensuring security with the
@@ -293,7 +296,7 @@ function Login() {
                   >
                     High-speed transfers
                   </h4>
-                  <p style={{ color: "#000", fontSize: "12px" }}>
+                  <p className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
                     Usually, users have to wait for one block to confirm for
                     their transactions to be processed. But not anymore. We use
                     public layers which release checkpoints after a specified
@@ -316,7 +319,7 @@ function Login() {
                   >
                     Gas Proof
                   </h4>
-                  <p style={{ color: "#000", fontSize: "12px" }}>
+                  <p  className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
                     Users don’t have to go through the high barrier of high gas
                     costs anymore. With zero transaction costs from our gas
                     station network, it is now stress free to trade
@@ -336,7 +339,7 @@ function Login() {
                   >
                     Security first
                   </h4>
-                  <p style={{ color: "#000", fontSize: "12px" }}>
+                  <p  className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
                     Implementing Matic PoS Chain, a permissionless,
                     EVM-compatible, PoS-secured Ethereum sidechain which relies
                     on strong Ethereum security for validator staking and
