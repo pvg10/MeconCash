@@ -349,16 +349,15 @@ function Login() {
         </div>
       </section>
       <div
-        style={{
-          background: "url(/faq-bg.png) no-repeat center",
-          backgroundSize: "cover",
-        }}
+        className="faq-container"
       >
         <section id="faq" className="faq">
           <div className="container">
             <div className="section-title">
               <h4 className="text-center pt-5">FAQ</h4>
-              <Faq data={faqs} />
+              <Faq data={faqs} config = {{
+                animate :true,}
+              }/>
             </div>
           </div>
         </section>
