@@ -42,7 +42,8 @@ const faqs = {
     },
     {
       title: "How can I make money with MCFinance?",
-      content: "Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur"
+      content:
+        "Lorem ipsum dolor sit amet, consectetur, Lorem ipsum dolor sit amet, consectetur",
     },
     {
       title: "What is the MCF token?",
@@ -126,22 +127,19 @@ function Login() {
                     className="image-box"
                     // style={{ border: "1px solid", height: "95%" }}
                   >
-                    <p className="mcf" >
-                      MCF DEX
-                    </p>
+                    <p className="mcf">MCF DEX</p>
                     <div className="mcf-content">
-
-                    <p>
-                      MCFinance is a decentralized exchange giving the power
-                      back to the people.
-                    </p>
-                    <p>
-                      Powered by Polygon, we offer secure and light-speed fast
-                      transactions. Everybody can now trade cryptocurrencies
-                      without costly fees that stop many from exchanging their
-                      tokens, creating an environment where you can get the most
-                      out of every block.
-                    </p>
+                      <p>
+                        MCFinance is a decentralized exchange giving the power
+                        back to the people.
+                      </p>
+                      <p>
+                        Powered by Polygon, we offer secure and light-speed fast
+                        transactions. Everybody can now trade cryptocurrencies
+                        without costly fees that stop many from exchanging their
+                        tokens, creating an environment where you can get the
+                        most out of every block.
+                      </p>
                     </div>
                     <p>
                       {/* FAAD53 */}
@@ -188,7 +186,7 @@ function Login() {
                       >
                         Security
                       </h4>
-                      <p  style={{ color: "#7F8385", fontSize: "14px" }}>
+                      <p style={{ color: "#7F8385", fontSize: "14px" }}>
                         MCF DEX is able to achieve both scalibilty and security
                         with Polygon's layer 2 scaling solution that uses
                         sidechains for off-chain computation while ensuring
@@ -275,7 +273,7 @@ function Login() {
                   >
                     The power is in your hands
                   </h4>
-                  <p className="icon-box-content" >
+                  <p className="icon-box-content">
                     MCF DEX is able to achieve both scalibilty and security with
                     Polygon's layer 2 scaling solution that uses sidechains for
                     off-chain computation while ensuring security with the
@@ -296,7 +294,10 @@ function Login() {
                   >
                     High-speed transfers
                   </h4>
-                  <p className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
+                  <p
+                    className="icon-box-content"
+                    style={{ color: "#000", fontSize: "12px" }}
+                  >
                     Usually, users have to wait for one block to confirm for
                     their transactions to be processed. But not anymore. We use
                     public layers which release checkpoints after a specified
@@ -319,7 +320,10 @@ function Login() {
                   >
                     Gas Proof
                   </h4>
-                  <p  className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
+                  <p
+                    className="icon-box-content"
+                    style={{ color: "#000", fontSize: "12px" }}
+                  >
                     Users don’t have to go through the high barrier of high gas
                     costs anymore. With zero transaction costs from our gas
                     station network, it is now stress free to trade
@@ -339,7 +343,10 @@ function Login() {
                   >
                     Security first
                   </h4>
-                  <p  className="icon-box-content" style={{ color: "#000", fontSize: "12px" }}>
+                  <p
+                    className="icon-box-content"
+                    style={{ color: "#000", fontSize: "12px" }}
+                  >
                     Implementing Matic PoS Chain, a permissionless,
                     EVM-compatible, PoS-secured Ethereum sidechain which relies
                     on strong Ethereum security for validator staking and
@@ -351,23 +358,158 @@ function Login() {
           </div>
         </div>
       </section>
-      <div className="faq-container" >
-      <div id="accordion">
-        <div className="card">
-          <div className="card-header" id="headingOne">
-            <h5 className="mb-0">
-              <button className="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Collapsible Group Item #1
-              </button>
-            </h5>
-            </div>
-            <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-              <div className="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      <div className="faq-container">
+        <section id="faq" className="faq">
+          <div className="container">
+            <div className="section-title">
+              <h4 className="text-center pt-5">FAQ</h4>
+              {/* <Faq data={faqs} config = {{
+                animate :true,}
+              }/> */}
+              <div id="accordion">
+                <div className="card">
+                  <div className="card-header" id="headingOne">
+                    <h5 className="mb-0">
+                      <button
+                        className="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        What is a decentralized exchange, and what makes it
+                        different?
+                      </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    className="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="card-header" id="headingTwo">
+                    <h5 className="mb-0">
+                      <button
+                        className="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        What is a decentralized exchange, and what makes it
+                        different?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    className="collapse"
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      Using Layer 2 for transactions allows us for seamless
+                      transfers for our customers with close to zero gas fees
+                      included. With the average time of transaction being
+                      around 30 seconds and the cost of over $6 for Ethereum on
+                      various exchanges available on the market, we were able to
+                      make it literally free with our gas station network and
+                      approximately 1~2 seconds for an average transaction.
+                    </div>
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="card-header" id="headingThree">
+                    <h5 className="mb-0">
+                      <button
+                        className="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        How can I make money with MCFinance?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseThree"
+                    className="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div className="card">
+                  <div className="card-header" id="headingThree">
+                    <h5 className="mb-0">
+                      <button
+                        className="btn btn-link collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        What is the MCF token?
+                      </button>
+                    </h5>
+                  </div>
+                  <div
+                    id="collapseFour"
+                    className="collapse"
+                    aria-labelledby="headingThree"
+                    data-parent="#accordion"
+                  >
+                    <div className="card-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
       <Footer />
     </>
