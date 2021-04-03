@@ -21,26 +21,26 @@ import Select, { components } from "react-select";
 // import ReactFlagsSelect from "react-flags-select";
 
 const options = [
-  { value: "eng", label: "Eng", icon: "united-kingdom.png" },
-  { value: "eng-us", label: "US-Eng", icon: "united-kingdom.png" },
+  { value: "eng", label: "ENG", icon: "united-kingdom.png" },
+  // { value: "eng-us", label: "US-ENG", icon: "united-kingdom.png" },
 ];
 const { Option, SingleValue } = components;
 
-const IconOption = props => (
+const IconOption = (props) => (
   <Option {...props}>
     <img
-      src={require('/public/' + props.data.icon)}
-      style={{ width: 20 }}
+      src={require("/public/" + props.data.icon)}
+      style={{ width: 20, marginRight: "8px" }}
       alt={props.data.label}
     />
     {props.data.label}
   </Option>
 );
-const ValueOption = props => (
+const ValueOption = (props) => (
   <SingleValue {...props}>
     <img
-      src={require('/public/' + props.data.icon)}
-      style={{ width: 20 }}
+      src={require("/public/" + props.data.icon)}
+      style={{ width: 20, marginRight: "8px" }}
       alt={props.data.label}
     />
     {props.data.label}
@@ -141,6 +141,9 @@ function Header(props) {
             </button>
             <div className="lang__select">
               <Select
+                // className="react-select-container"
+                classNamePrefix="react-select"
+                // styles={{}}
                 defaultValue={options[0]}
                 options={options}
                 components={{ Option: IconOption, SingleValue: ValueOption }}
