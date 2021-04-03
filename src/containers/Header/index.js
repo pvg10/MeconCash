@@ -17,28 +17,35 @@ import { DSE_URL } from "../../utils/Constants";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
-// import Select, { components } from "react-select";
-import ReactFlagsSelect from "react-flags-select";
+import Select, { components } from "react-select";
+// import ReactFlagsSelect from "react-flags-select";
 
-const customLabels = {
-  GB: "GB",
-  US: "US",
-};
-// const options = [
-//   { value: "England", label: "England", icon: "united-kingdom.png" },
-// ];
-// const { Option } = components;
+const options = [
+  { value: "eng", label: "Eng", icon: "united-kingdom.png" },
+  { value: "eng-us", label: "US-Eng", icon: "united-kingdom.png" },
+];
+const { Option, SingleValue } = components;
 
-// const IconOption = props => (
-//   <Option {...props}>
-//     <img
-//       src={require('/public/' + props.data.icon)}
-//       style={{ width: 36 }}
-//       alt={props.data.label}
-//     />
-//     {props.data.label}
-//   </Option>
-// );
+const IconOption = props => (
+  <Option {...props}>
+    <img
+      src={require('/public/' + props.data.icon)}
+      style={{ width: 20 }}
+      alt={props.data.label}
+    />
+    {props.data.label}
+  </Option>
+);
+const ValueOption = props => (
+  <SingleValue {...props}>
+    <img
+      src={require('/public/' + props.data.icon)}
+      style={{ width: 20 }}
+      alt={props.data.label}
+    />
+    {props.data.label}
+  </SingleValue>
+);
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,7 +67,6 @@ function Header(props) {
   const user = useSelector((state) => state.User.user);
   const [isbase, setBase] = useState(false);
   const [option, setOption] = useState(null);
-  const [selected, setSelected] = useState("");
   // const user = "Admin";
   const classes = useStyles();
   let avatarChars = "A";
@@ -134,34 +140,12 @@ function Header(props) {
               Launch
             </button>
             <div className="lang__select">
-              {/* <Select
+              <Select
                 defaultValue={options[0]}
                 options={options}
-                components={{ Option: IconOption }}
-                className="lang__select"
+                components={{ Option: IconOption, SingleValue: ValueOption }}
+                className="lang--select"
                 id="languageSelect"
-              /> */}
-              {/* <Select className="form-control" id="languageSelect">
-                <option
-                  data-content="<img src='/united-kingdom.png'/>"
-                  value="ENG"
-                >
-                  ENG
-                </option>
-              </Select> */}
-              <ReactFlagsSelect
-                countries={["US", "GB"]}
-                customLabels={{
-                  GB: "ENG",
-                  US: "EN-US",
-                  // FR: "FR",
-                  // DE: "DE",
-                  // IT: "IT",
-                }}
-                defaultCountry="GB"
-                onSelect={code => setSelected(code)}
-                selected={"GB"}
-                // selectedSize={14}
               />
             </div>
           </div>
