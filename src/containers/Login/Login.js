@@ -141,7 +141,7 @@ function Login() {
                         most out of every block.
                       </p>
                     </div>
-                    <p>
+                    <div style={{ display: "flex" }}>
                       <button
                         type="button"
                         style={{ backgroundColor: "#FAAD53 !important" }}
@@ -149,10 +149,15 @@ function Login() {
                       >
                         Launch
                       </button>
-                      <button type="button" className="btn btn-dark">
-                        White Paper
-                      </button>
-                    </p>
+                      <a
+                        href="https://github.com/MCFinance/MCFinance"
+                        target="_blank"
+                        className="btn btn-dark"
+                        style={{display:"flex", alignItems:"center", justifyContent:"center"}}
+                      >
+                        Documentation
+                      </a>
+                    </div>
                   </div>
                 </div>
                 <div className="col-sm-6">

@@ -22,10 +22,10 @@ function Footer() {
       </div> */}
       <div className="footer__bottom__section">
         <div className="container">
-        <hr />
+          <hr />
 
           <div
-          className="footer-text"
+            className="footer-text"
             // style={{
             //   display: "flex",
             //   justifyContent: "flex-start",
@@ -42,12 +42,24 @@ function Footer() {
                   alignItems: "center",
                 }}
               >
-                <i className="fab fa-twitter"></i>
-                {/* <i className="fas fa-envelope"></i> */}
-                <i className="fab fa-telegram"></i>
-                <i className="fab fa-github"></i>
-                <img src="/gitbook-icon.png" />
-                <i className="fab fa-medium-m"></i>
+                <a href="https://twitter.com/MCFinanceDEX" target="_blank">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="https://github.com/MCFinance/MCFinance"
+                  target="_blank"
+                >
+                  <i className="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/MCFinance/MCFinance" target="_blank">
+                  <i className="fab fa-github"></i>
+                </a>
+                <a href="https://github.com/MCFinance/MCFinance" target="_blank">
+                  <img src="/gitbook-icon.png" />
+                </a>
+                <a href="https://github.com/MCFinance/MCFinance" target="_blank">
+                  <i className="fab fa-medium-m"></i>
+                </a>
               </div>
             </div>
           </div>
