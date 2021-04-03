@@ -46,7 +46,7 @@ function Footer() {
                   <i className="fab fa-twitter"></i>
                 </a>
                 <a
-                  href="https://github.com/MCFinance/MCFinance"
+                  href="https://t.me/MCFinanceDEX"
                   target="_blank"
                 >
                   <i className="fab fa-telegram"></i>
@@ -54,10 +54,10 @@ function Footer() {
                 <a href="https://github.com/MCFinance/MCFinance" target="_blank">
                   <i className="fab fa-github"></i>
                 </a>
-                <a href="https://github.com/MCFinance/MCFinance" target="_blank">
+                <a href="https://mcfinance.gitbook.io/mcfinance" target="_blank">
                   <img src="/gitbook-icon.png" />
                 </a>
-                <a href="https://github.com/MCFinance/MCFinance" target="_blank">
+                <a href="https://medium.com/@MCFinance" target="_blank">
                   <i className="fab fa-medium-m"></i>
                 </a>
               </div>

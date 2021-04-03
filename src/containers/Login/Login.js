@@ -150,7 +150,7 @@ function Login() {
                         Launch
                       </button>
                       <a
-                        href="https://github.com/MCFinance/MCFinance"
+                        href="https://mcfinance.gitbook.io/mcfinance"
                         target="_blank"
                         className="btn btn-dark"
                         style={{display:"flex", alignItems:"center", justifyContent:"center"}}
