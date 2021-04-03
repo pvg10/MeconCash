@@ -400,14 +400,17 @@ animate :true,}
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                          Unlike a centralized exchange, we don’t directly store
+                         <p>
+                         Unlike a centralized exchange, we don’t directly store
                           your assets. It gives you the safety and ability to
                           trade large volumes without having to worry about what
-                          will happen next. In addition to that, there is no
+                          will happen next. 
+                           </p>
+                           <p> In addition to that, there is no
                           log-in process required, meaning you don’t have to
                           provide your personal information, making the process
                           as anonymous as it gets. We appreciate the privacy
-                          cryptocurrencies give us and don’t want to ruin it.
+                          cryptocurrencies give us and don’t want to ruin it.</p>
                         </div>
                       </div>
                     </div>
