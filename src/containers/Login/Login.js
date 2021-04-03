@@ -153,7 +153,11 @@ function Login() {
                         href="https://mcfinance.gitbook.io/mcfinance"
                         target="_blank"
                         className="btn btn-dark"
-                        style={{display:"flex", alignItems:"center", justifyContent:"center"}}
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
                       >
                         Documentation
                       </a>
@@ -396,18 +400,14 @@ animate :true,}
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          Unlike a centralized exchange, we don’t directly store
+                          your assets. It gives you the safety and ability to
+                          trade large volumes without having to worry about what
+                          will happen next. In addition to that, there is no
+                          log-in process required, meaning you don’t have to
+                          provide your personal information, making the process
+                          as anonymous as it gets. We appreciate the privacy
+                          cryptocurrencies give us and don’t want to ruin it.
                         </div>
                       </div>
                     </div>
@@ -438,9 +438,11 @@ animate :true,}
                           fees included. With the average time of transaction
                           being around 30 seconds and the cost of over $6 for
                           Ethereum on various exchanges available on the market,
-                          we were able to make it literally free with our gas
-                          station network and approximately 1~2 seconds for an
-                          average transaction.
+                          we were able to cut it down to approximately one
+                          second with the cost of around $0.000002, making it
+                          almost half a million times cheaper. However, we took
+                          it a step further and deployed a gas station network
+                          so that the gas fee is literally free!
                         </div>
                       </div>
                     </div>
@@ -466,18 +468,12 @@ animate :true,}
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          We wanted to create a platform built by the community
+                          for the community. Because of that, we have eliminated
+                          the costly barriers of entry that might discourage
+                          some cryptocurrency users, especially when they don’t
+                          own much in their wallets, allowing everybody to
+                          access DeFi.
                         </div>
                       </div>
                     </div>
@@ -503,18 +499,14 @@ animate :true,}
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          If you decide to provide liquidity for trading pairs
+                          on the platform, you will receive 0.25% of the trading
+                          fees as well as MCFinance’s native MCF token for your
+                          participation in this process and being a part of the
+                          community. The token is governed by its holders, who
+                          can create proposals for and vote on various factors
+                          relating to the protocol, giving you partial control
+                          over the platform.
                         </div>
                       </div>
                     </div>
@@ -540,18 +532,15 @@ animate :true,}
                         data-parent="#faq"
                       >
                         <div className="card-body">
-                          Anim pariatur cliche reprehenderit, enim eiusmod high
-                          life accusamus terry richardson ad squid. 3 wolf moon
-                          officia aute, non cupidatat skateboard dolor brunch.
-                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-                          wolf moon tempor, sunt aliqua put a bird on it squid
-                          single-origin coffee nulla assumenda shoreditch et.
-                          Nihil anim keffiyeh helvetica, craft beer labore wes
-                          anderson cred nesciunt sapiente ea proident. Ad vegan
-                          excepteur butcher vice lomo. Leggings occaecat craft
-                          beer farm-to-table, raw denim aesthetic synth nesciunt
-                          you probably haven't heard of them accusamus labore
-                          sustainable VHS.
+                          MCF tokens are distributed between our community as a
+                          reward for contributing to the community. Everybody
+                          who contributes to the MCFinance exchange will receive
+                          MCF tokens which are native to the platform. It helps
+                          facilitate the trade and staking of multiple tokens,
+                          giving our users even more flexibility. To ensure
+                          stability, the tokens will be slowly released to the
+                          public in phases with a lock period to avoid buy and
+                          dump scenarios.
                         </div>
                       </div>
                     </div>
